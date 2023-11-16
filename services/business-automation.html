@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <title>APPSURE - BUSINESS PROCESS AUTOMATION</title>
+
+  <!-- Styles -->
+  <link href="/assets/css/page.css" rel="stylesheet">
+  <link href="/assets/css/style.css" rel="stylesheet">
+  <link href="/assets/css/services.css" rel="stylesheet">
+  <link href="/assets/css/font-styling.css" rel="stylesheet">
+
+  <link rel="apple-touch-icon" href="assets/img/favicon.png">
+  <link rel="icon" href="assets/img/favicon.png">
+
+  <style>
+    .title-drop {
+      display: flex;
+    }
+
+    @media only screen and (max-width: 768px) {
+      .title-drop {
+        display: block;
+      }
+    }
+
+    .main-timeline {
+      position: relative;
+    }
+
+    .main-timeline:after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+
+    .main-timeline .timeline {
+      width: 50%;
+      margin: 0 0 20px 20px;
+      float: right;
+    }
+
+    .main-timeline .timeline-content {
+      color: #fff;
+      background: linear-gradient(to right, #3f77b0, #59b2d3);
+      text-align: center;
+      padding: 20px 20px 20px 100px;
+      border-radius: 0 20px 20px 0;
+      box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+      display: block;
+      position: relative;
+    }
+
+    .main-timeline .timeline-content:hover {
+      text-decoration: none;
+    }
+
+    .main-timeline .timeline-year {
+      color: #3f77b0;
+      background-color: #fff;
+      font-size: 35px;
+      font-weight: 600;
+      text-align: center;
+      line-height: 130px;
+      width: 130px;
+      height: 100%;
+      border-radius: 98px 0 0 10px;
+      box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+      position: absolute;
+      left: -130px;
+      top: 0;
+    }
+
+    .main-timeline .timeline-icon {
+      color: #fff;
+      font-size: 50px;
+      transform: translateY(-50%);
+      position: absolute;
+      left: 30px;
+      top: 50%;
+    }
+
+    .main-timeline .title {
+      font-size: 20px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin: 0 0 5px;
+    }
+
+    .main-timeline .description {
+      font-size: 17px;
+      letter-spacing: 1px;
+      margin: 0;
+      font-family: Spartan MB, sans-serif;
+    }
+
+    .main-timeline .timeline:nth-child(even) {
+      float: left;
+      margin: 0 20px 20px 0;
+    }
+
+    .main-timeline .timeline:nth-child(even) .timeline-content {
+      padding: 20px 100px 20px 20px;
+      border-radius: 20px 0 0 20px;
+    }
+
+    .main-timeline .timeline:nth-child(even) .timeline-content:before {
+      right: auto;
+      left: 0;
+      clip-path: polygon(0 0, 100% 100%, 65% 0);
+    }
+
+    .main-timeline .timeline:nth-child(even) .timeline-year {
+      left: auto;
+      right: -130px;
+      border-radius: 0 98px 10px 0;
+    }
+
+    .main-timeline .timeline:nth-child(even) .timeline-icon {
+      right: 30px;
+      left: auto;
+    }
+
+    .main-timeline .timeline:nth-child(4n+2) .timeline-content {
+      background: linear-gradient(to right, #3f77b0, #59b2d3);
+    }
+
+    .main-timeline .timeline:nth-child(4n+2) .timeline-year {
+      color: #3f77b0;
+    }
+
+    .main-timeline .timeline:nth-child(4n+3) .timeline-content {
+      background: linear-gradient(to right, #3f77b0, #59b2d3)
+    }
+
+    .main-timeline .timeline:nth-child(4n+3) .timeline-year {
+      color: #3f77b0;
+    }
+
+    .main-timeline .timeline:nth-child(4n+4) .timeline-content {
+      background: linear-gradient(to right, #3f77b0, #59b2d3)
+    }
+
+    .main-timeline .timeline:nth-child(4n+4) .timeline-year {
+      color: #3f77b0;
+    }
+
+    @media screen and (max-width:767px) {
+      .main-timeline .timeline {
+        width: 100%;
+        padding: 50px 0 0 0;
+      }
+
+      .main-timeline .timeline .timeline-content,
+      .main-timeline .timeline:nth-child(even) .timeline-content {
+        padding: 20px 15px 20px 60px;
+        border-radius: 0 20px 20px 20px;
+      }
+
+      .main-timeline .timeline .timeline-year,
+      .main-timeline .timeline:nth-child(even) .timeline-year {
+        font-size: 25px;
+        border-radius: 15px 15px 0 0;
+        box-shadow: none;
+        width: 100px;
+        height: 50px;
+        line-height: 50px;
+        top: -50px;
+        left: 0;
+      }
+
+      .main-timeline .timeline .timeline-icon,
+      .main-timeline .timeline:nth-child(even) .timeline-icon {
+        font-size: 28px;
+        left: 15px;
+        right: auto;
+      }
+    }
+
+    @media screen and (max-width:576px) {
+      .main-timeline .title {
+        font-size: 18px;
+      }
+    }
+
+    .timeline::before {
+      display: none;
+    }
+
+  </style>
+
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-stick-dark" data-navbar="sticky">
+    <div class="container">
+
+      <div class="navbar-left navbar-dark">
+        <button onclick="openNavbar()" class="navbar-toggler" type="button"><span class="navbar-toggler-icon"></span></button>
+        <a class="navbar-brand" href="/Index.html">
+          <img class="logo-light" src="/assets/img/logos/appsure-logo.png" alt="logo">
+          <!-- <img class="logo-light" src="assets/img/logo-light.png" alt="logo"> -->
+        </a>
+      </div>
+      <section class="navbar-mobile">
+        <ul class="nav nav-navbar">
+          <a class="nav-link" href="/about.html">About</a>
+          <a class="nav-link" href="/case-studies.html">Case Studies</a>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Services<span class="arrow"></span></a>
+            <nav class="nav nav-sub">
+              <a class="nav-link" href="/services/solution.html">Appsure Solution</a>
+              <a class="nav-link" href="/services/web-development.html">Web & App Development</a>
+              <a class="nav-link" href="/services/data-flatform.html">Modern Data Platform</a>
+              <a class="nav-link" href="/services/business-automation.html">Business Process Automation</a>
+            </nav>
+          </li>
+          <a class="nav-link" href="/brochures.html">Brochures</a>
+          <a class="nav-link" href="/contact.html">Contact Us</a>
+        </ul>
+      </section>
+    </div>
+  </nav>
+
+
+  <!-- Header -->
+
+  <header class="header">
+    <div class="container aboutUs dark">
+      <a href="/Index.html" class="toHome d-none d-md-inline-flex">
+        <img src="/assets/img/arrow_left_blue.svg" alt="" class="arrow_left">
+        <span title="Home" class="back-home">Home</span>
+      </a>
+      <div class="title-drop">
+        <h1 class="text-bold">Business Process Automation<br>as a service</h1>
+      </div>
+      <div class="row align-items-center">
+        <div class="col-xs-12 col-md-8">
+          <p>
+            In order to achieve digital transformation within your business, a key enabler is business automation. In
+            our
+            pursuit for optimal customer experience during the customer journey, process automation is a crucial feature
+            to
+            achieve this. Our skilled consultants incorporate a set of open source tools to orchestrate business
+            processes
+            with business decisions, replacing legacy processes with rule and data driven processes that empower your
+            business to focus on what matters. The result is the deployment of cloud based decisions as a service which
+            enable stateless decisioning and business process automation.
+          </p>
+        </div>
+        <div class="col-xs-12 col-md-4">
+          <img src="/assets/img/process.png" alt="process">
+        </div>
+      </div>
+      <div class="socials">
+        <a href="https://www.linkedin.com/company/appsureau/" class="social social" target="_blank">
+          <img src="/assets/img/in.svg" alt="">
+        </a>
+      </div>
+    </div>
+  </header><!-- /.header -->
+
+
+  <!-- Main Content -->
+  <main class="main-content">
+
+    <section class="creation">
+      <div class="container">
+        <h1 class="text-bold">How?</h1>
+        <h5>Through our 5-step Agile process we achieve project success.</h5>
+      </div>
+    </section>
+
+    <section class="creation">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="main-timeline">
+              <div class="timeline">
+                <a href="#" class="timeline-content">
+                  <h5 class="timeline-year">Step 1</h5>
+                  <div class="timeline-icon">
+                    <i class="fa fa-globe"></i>
+                  </div>
+                  <h3 class="title text-white">DISCOVERY</h3>
+                  <p class="description">
+                    Understand your business challenges and desired outcomes.
+                  </p>
+                </a>
+              </div>
+              <div class="timeline">
+                <a href="#" class="timeline-content">
+                  <h5 class="timeline-year">Step 2</h5>
+                  <div class="timeline-icon">
+                    <i class="fa fa-comments"></i>
+                  </div>
+                  <h3 class="title text-white">PLANNING</h3>
+                  <p class="description">
+                    Define project plans, deliverables and requirements.
+                  </p>
+                </a>
+              </div>
+              <div class="timeline">
+                <a href="#" class="timeline-content">
+                  <h5 class="timeline-year">Step 3</h5>
+                  <div class="timeline-icon">
+                    <i class="fa fa-adjust"></i>
+                  </div>
+                  <h3 class="title text-white">ALIGNMENT</h3>
+                  <p class="description">
+                    Adjust and agree on what you have versus what you need.
+                  </p>
+                </a>
+              </div>
+              <div class="timeline">
+                <a href="#" class="timeline-content">
+                  <h5 class="timeline-year">Step 4</h5>
+                  <div class="timeline-icon">
+                    <i class="fa fa-cogs"></i>
+                  </div>
+                  <h3 class="title text-white">EXECUTION</h3>
+                  <p class="description">
+                    Replace legacy systems and processes with flexible systems and functions.
+                  </p>
+                </a>
+              </div>
+              <div class="timeline">
+                <a href="#" class="timeline-content">
+                  <h5 class="timeline-year">Step 5</h5>
+                  <div class="timeline-icon">
+                    <i class="fa fa-rocket"></i>
+                  </div>
+                  <h3 class="title text-white">ONGOING</h3>
+                  <p class="description">
+                    Implementation, support and continual enhancements.
+                  </p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- <section class="creation">
+      <div class="container">
+        <article>
+          <h3 class="counting">DISCOVERY</h3>
+          <h4>step one</h4>
+          <p class="step-content">Understand your business challenges and desired outcomes.</p>
+        </article>
+        <article>
+          <h3 class="counting">PLANNING</h3>
+          <h4>step two</h4>
+          <p class="step-content">Define project plans, deliverables and requirements.</p>
+        </article>
+        <article>
+          <h3 class="counting">ALIGNMENT</h3>
+          <h4>step three</h4>
+          <p class="step-content">Adjust and agree on what you have versus what you need.</p>
+        </article>
+        <article>
+          <h3 class="counting">EXECUTION</h3>
+          <h4>step four</h4>
+          <p class="step-content">Replace legacy systems and processes with flexible systems and functions.</p>
+        </article>
+        <article>
+          <h3 class="counting">ONGOING</h3>
+          <h4>step five</h4>
+          <p class="step-content">Implementation, support and continual enhancements.</p>
+        </article>
+      </div>
+    </section> -->
+
+    <!--
+      |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+      | Tools
+      |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+      !-->
+    <section class="tools">
+      <div class="container">
+        <h1 class="text-bold">Tools:
+        </h1>
+        <h5 class="pl-0">
+          Our implementations conform to OMG standards thus enabling portability between platforms and tools
+        </h5>
+        <div class="row align-items-center">
+          <div class="col-lg-1"></div>
+          <div class="col-lg-3 col-md-4 col-xs-12" data-aos="fade-up" data-aos-duration="300">
+            <div class="feature">
+              <img src="/assets/img/logos/DMN-logo.png">
+              <!-- <span class="feature-title">DMN</span> -->
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-xs-12" data-aos="fade-up" data-aos-duration="500">
+            <div class="feature">
+              <img src="/assets/img/logos/BPMNMod-Icon.png">
+              <!-- <span class="feature-title">BPMN</span> -->
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4 col-xs-12" data-aos="fade-up" data-aos-duration="700">
+            <div class="feature">
+              <img src="/assets/img/logos/drools_logo_600px.gif">
+              <!-- <span class="feature-title">Drools</span> -->
+            </div>
+          </div>
+          <div class="col-md-2 d-lg-none d-md-block"></div>
+          <div class="col-md-2 d-lg-none d-md-block"></div>
+          <div class="col-lg-1"></div>
+        </div>
+        <div class="row align-items-center">
+          <div class="col-lg-3 col-md-2"></div>
+          <div class="col-lg-3 col-md-4 col-xs-12" data-aos="fade-up" data-aos-duration="300">
+            <div class="feature">
+              <img src="/assets/img/logos/camunda.png">
+              <!-- <span class="feature-title">DMN</span> -->
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-xs-12" data-aos="fade-up" data-aos-duration="500">
+            <div class="feature">
+              <img src="/assets/img/logos/appsure.png">
+              <!-- <span class="feature-title">BPMN</span> -->
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-2"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="toContact">
+      <div class="container">
+        <h3 class="text-bold">Have a project? Let’s make it together!</h3>
+        <a href="/contact.html" class="button">Contact us</a>
+      </div>
+    </section>
+  </main>
+    <!-- Footer -->
+    <footer class="footer-bg position-relative">
+      <img src="/assets/img/Appsure_Website_footer.png" alt="Appsure footer">
+      <div class="footer-content">
+        <div class="d-flex">
+          <div class="footer-text">
+            <p>Appsure-Australia Pty Ltd</p>
+            <p>ABN 62 620 741 988</p>
+          </div>
+          <div>
+            <a href="https://www.linkedin.com/company/appsureau/" class="social social" target="_blank">
+              <img src="/assets/img/in.svg" alt="">
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+    <!-- Scripts -->
+    <script src="/assets/js/page.js"></script>
+    <script src="/assets/js/script.js"></script>
+    <script src="/assets/js/navbar.js"></script>
+
+</body>
+
+</html>

@@ -1,234 +1,346 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
 
-<head>
-  <!-- Basic -->
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <!-- Mobile Metas -->
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <!-- Site Metas -->
-  <meta name="keywords" content="" />
-  <meta name="description" content="" />
-  <meta name="author" content="" />
+    <title>APPSURE - CONTACT</title>
 
-  <title>Inance</title>
+    <!-- Styles -->
+    <link href="assets/css/page.min.css" rel="stylesheet" />
+    <link href="assets/css/style.css" rel="stylesheet" />
+    <link href="assets/css/home.css" rel="stylesheet" />
+    <link href="assets/css/contact-us.css" rel="stylesheet" />
+    <link href="/assets/css/font-styling.css" rel="stylesheet" />
 
-  <!-- slider stylesheet -->
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
-  <!-- bootstrap core css -->
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
-  <!-- font awesome style -->
-  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="assets/img/favicon.png" />
+    <link rel="icon" href="assets/img/favicon.png" />
 
-  <!-- Custom styles for this template -->
-  <link href="css/style.css" rel="stylesheet" />
-  <!-- responsive style -->
-  <link href="css/responsive.css" rel="stylesheet" />
+    <!--  Open Graph Tags -->
+    <meta property="og:title" content="Appsure" />
+    <meta
+      property="og:description"
+      content="Appsure,technology solution provider, specialising in insurance systems."
+    />
+    <meta property="og:image" content="" />
+    <meta property="og:url" content="" />
+    <meta name="twitter:card" content="summary_large_image" />
+  </head>
 
-</head>
+  <style>
+    .navbar {
+      background: #fff;
+    }
 
-<body>
-  <div class="hero_area">
-    <!-- header section strats -->
-    <header class="header_section">
-      <div class="header_top">
-        <div class="container-fluid">
-          <div class="contact_nav">
-            <a href="">
-              <i class="fa fa-phone" aria-hidden="true"></i>
-              <span>
-                Call : +01 123455678990
-              </span>
-            </a>
-            <a href="">
-              <i class="fa fa-envelope" aria-hidden="true"></i>
-              <span>
-                Email : demo@gmail.com
-              </span>
+    /* .nav-link.active,
+    a.dropdown-toggle {
+        color: #111518;
+    }
+
+    nav {
+        color: #111518;
+    }
+
+    nav .dropdown-menu li a {
+        color: white;
+    }
+
+    nav .dropdown-menu {
+        background: #111518;
+    } */
+
+    .nav-link {
+      color: #4b5b6d !important;
+    }
+
+    .arrow {
+      border-top: 3px solid rgb(75 91 109) !important;
+    }
+
+    .navbar-toggler {
+      color: #4b5b6d !important;
+    }
+
+    .invalid-input {
+      border-color: red !important;
+    }
+  </style>
+
+  <body>
+    <!-- Navbar -->
+    <nav
+      class="navbar navbar-expand-lg navbar-dark navbar-stick-dark"
+      data-navbar="sticky"
+    >
+      <div class="container">
+        <div class="navbar-left navbar-dark">
+          <button onclick="openNavbar()" class="navbar-toggler" type="button">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">
+            <img class="logo-dark" src="assets/img/logos/appsure-logo.png" alt="logo">
+            <!-- <img class="logo-light" src="assets/img/logo-light.png" alt="logo"> -->
+          </a>
+        </div>
+        <section class="navbar-mobile">
+          <ul class="nav nav-navbar">
+            <a class="nav-link" href="/about.html">About</a>
+            <a class="nav-link" href="/case-studies.html">Case Studies</a>
+            <li class="nav-item">
+              <a class="nav-link" href="#"
+                >Services<span class="arrow"></span
+              ></a>
+              <nav class="nav nav-sub">
+                <a class="nav-link" href="/services/solution.html"
+                  >Appsure Solution</a
+                >
+                <a class="nav-link" href="/services/web-development.html"
+                  >Web & App Development</a
+                >
+                <a class="nav-link" href="/services/data-flatform.html"
+                  >Modern Data Platform</a
+                >
+                <a class="nav-link" href="/services/business-automation.html"
+                  >Business Process Automation</a
+                >
+              </nav>
+            </li>
+            <a class="nav-link" href="/brochures.html">Brochures</a>
+            <a class="nav-link" href="/contact.html">Contact Us</a>
+            </ul>
+        </section>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content contact-page">
+      <!--
+      |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+      | Contact start
+      |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+      !-->
+      <section class="section pb-0 pt-170">
+        <div class="container d-flex contact-us">
+          <div class="col-lg-8 col-md-12 col-sm-12">
+            <h1 class="contact-header">Contact Us</h1>
+            <h5 class="text-bold mb-8">
+              Fill in the form or contact us directly:
+            </h5>
+            <div class="form-contact">
+              <form
+                data-toggle="validator"
+                role="form"
+                class="d-flex flex-wrap"
+                id="contactForm"
+              >
+                <div
+                  class="form-group input-material col-lg-6 col-md-12 col-sm-12 pr-lg-4 pr-0"
+                >
+                  <input
+                    name="fullName"
+                    type="text"
+                    class="form-control"
+                    id="name"
+                    required
+                  />
+                  <label for="name" class="control-label">
+                    <p>Your full name*</p>
+                  </label>
+                </div>
+                <div
+                  class="form-group input-material col-lg-6 col-md-12 col-sm-12 pr-lg-4 pr-0"
+                >
+                  <input
+                    name="companyName"
+                    type="text"
+                    class="form-control"
+                    id="companyName"
+                    required
+                  />
+                  <label for="companyName" class="control-label">
+                    <p>Your company name*</p>
+                  </label>
+                </div>
+                <div
+                  class="form-group input-material col-lg-6 col-md-12 col-sm-12 pr-lg-4 pr-0"
+                >
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    name="email"
+                    required
+                  />
+                  <label for="email" class="control-label">
+                    <p>Your e-mail*</p>
+                  </label>
+                </div>
+                <div
+                  class="form-group input-material col-lg-6 col-md-12 col-sm-12 pr-lg-4 pr-0"
+                >
+                  <input
+                    type="text"
+                    pattern="^(?:\+?(61))? ?(?:\((?=.*\)))?(0?[2-57-8])\)? ?(\d\d(?:[- ](?=\d{3})|(?!\d\d[- ]?\d[- ]))\d\d[- ]?\d[- ]?\d{3})$"
+                    class="form-control"
+                    id="phone"
+                    name="phone"
+                    required
+                  />
+                  <label for="phone" class="control-label">
+                    <p>Your phone number*</p>
+                  </label>
+                </div>
+                <div
+                  class="form-group input-material col-lg-12 col-md-12 col-sm-12 pr-lg-4 pr-0"
+                >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="question"
+                    name="question"
+                    required
+                  />
+                  <label for="question" class="control-label">
+                    <p>Your question*</p>
+                  </label>
+                </div>
+                <div
+                  style="margin: 12px 0; padding: 0"
+                  class="g-recaptcha col-lg-12 col-md-12 col-md-12"
+                  data-sitekey="6LfaTvgiAAAAADnx2yMxeqxGHsa3Kp9_Tr3OHX1p"
+                ></div>
+                <div>
+                  <button type="button" class="submit-button" id="submitButton">Submit</button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-12 col-sm-12 d-flex align-items-center">
+            <div class="contact-address">
+              <p class="font-weight-bold">Sydney, Australia</p>
+              <p class="font-weight-bold">info@appsure.com.au</p>
+              <div class="socials">
+                <a
+                  href="https://www.linkedin.com/company/appsureau/"
+                  class="social social"
+                  target="_blank"
+                >
+                  <img src="/assets/img/in.svg" alt="" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--
+      |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+      | Contact End
+      |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+      !-->
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-bg position-relative">
+      <img src="/assets/img/footer-left.png" alt="Appsure footer" />
+      <img
+        src="/assets/img/footer-right.svg"
+        alt="Appsure footer"
+        class="footer-right"
+      />
+      <div class="footer-content">
+        <div class="d-flex">
+          <div class="footer-text">
+            <p>Appsure-Australia Pty Ltd</p>
+            <p>ABN 62 620 741 988</p>
+          </div>
+          <div class="socials">
+            <a
+              href="https://www.linkedin.com/company/appsureau/"
+              class="social social"
+              target="_blank"
+            >
+              <img src="./assets/img/in.svg" alt="" />
             </a>
           </div>
         </div>
       </div>
-      <div class="header_bottom">
-        <div class="container-fluid">
-          <nav class="navbar navbar-expand-lg custom_nav-container ">
-            <a class="navbar-brand" href="index.html">
-              <span>
-                Inance
-              </span>
-            </a>
+    </footer>
 
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class=""> </span>
-            </button>
+    <!-- Scroll top -->
+    <button class="btn btn-circle btn-primary scroll-top">
+      <i class="fa fa-angle-up"></i>
+    </button>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav ">
-                <li class="nav-item ">
-                  <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="about.html"> About</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="service.html">Services</a>
-                </li>
-                <li class="nav-item active">
-                  <a class="nav-link" href="contact.html">Contact Us</a>
-                </li>
-              </ul>
-            </div>
-          </nav>
-        </div>
-      </div>
-    </header>
-    <!-- end header section -->
-  </div>
+    <!-- Scripts -->
+    <script src="assets/js/page.js"></script>
+    <script src="assets/js/validator.min.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/material-input.js"></script>
+    <script src="assets/js/navbar.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
 
+    <script type="text/javascript">
+      emailjs.init('user_bsu3edDvqJ0AvSBhhxarh');
+    </script>
+    <script>
+      const isFormValid = () => {
+        const valid = ['name', 'companyName', 'email', 'phone', 'question'].map(
+          (i) => {
+            const el = document.getElementById(i);
+            if (!el.value) {
+              el.classList.add('invalid-input');
+              return false;
+            } else {
+              el.classList.remove('invalid-input');
+            }
+            return true;
+          }
+        );
 
-  <!-- contact section -->
+        return valid.every((i) => Boolean(i));
+      };
+      const serviceID = 'appsure_smtp_server';
+      const templateID = 'template_opfo0sg';
+      document
+        .getElementById('submitButton')
+        .addEventListener('click', function (event) {
+          console.log(this);
+          if (!isFormValid()) {
+            return;
+          }
+          // grecaptcha.render();
+          let contactForm = document.getElementById('contactForm');
+          let submitButton = document.getElementById('submitButton');
 
-  <section class="contact_section layout_padding">
-    <div class="container">
-      <div class="heading_container">
-        <h2>
-          Contact Us
-        </h2>
-      </div>
-      <div class="row">
-        <div class="col-md-6">
-          <form action="">
-            <div>
-              <input type="text" placeholder="Name" />
-            </div>
-            <div>
-              <input type="text" placeholder="Phone Number" />
-            </div>
-            <div>
-              <input type="email" placeholder="Email" />
-            </div>
-            <div>
-              <input type="text" class="message-box" placeholder="Message" />
-            </div>
-            <div class="d-flex ">
-              <button>
-                SEND
-              </button>
-            </div>
-          </form>
-        </div>
-        <div class="col-md-6">
-          <div class="map_container">
-            <div class="map">
-              <div id="googleMap" style="width:100%;height:100%;"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+          submitButton.disabled = true;
 
-  <!-- end contact section -->
-
-
-  <!-- info section -->
-  <section class="info_section ">
-    <div class="container">
-      <h4>
-        Get In Touch
-      </h4>
-      <div class="row">
-        <div class="col-lg-10 mx-auto">
-          <div class="info_items">
-            <div class="row">
-              <div class="col-md-4">
-                <a href="">
-                  <div class="item ">
-                    <div class="img-box ">
-                      <i class="fa fa-map-marker" aria-hidden="true"></i>
-                    </div>
-                    <p>
-                      Lorem Ipsum is simply dummy text
-                    </p>
-                  </div>
-                </a>
-              </div>
-              <div class="col-md-4">
-                <a href="">
-                  <div class="item ">
-                    <div class="img-box ">
-                      <i class="fa fa-phone" aria-hidden="true"></i>
-                    </div>
-                    <p>
-                      +02 1234567890
-                    </p>
-                  </div>
-                </a>
-              </div>
-              <div class="col-md-4">
-                <a href="">
-                  <div class="item ">
-                    <div class="img-box">
-                      <i class="fa fa-envelope" aria-hidden="true"></i>
-                    </div>
-                    <p>
-                      demo@gmail.com
-                    </p>
-                  </div>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="social-box">
-      <h4>
-        Follow Us
-      </h4>
-      <div class="box">
-        <a href="">
-          <i class="fa fa-facebook" aria-hidden="true"></i>
-        </a>
-        <a href="">
-          <i class="fa fa-twitter" aria-hidden="true"></i>
-        </a>
-        <a href="">
-          <i class="fa fa-youtube" aria-hidden="true"></i>
-        </a>
-        <a href="">
-          <i class="fa fa-instagram" aria-hidden="true"></i>
-        </a>
-      </div>
-    </div>
-  </section>
-
-
-
-  <!-- end info_section -->
-
-  <!-- footer section -->
-  <footer class="footer_section">
-    <div class="container">
-      <p>
-        &copy; <span id="displayDateYear"></span> All Rights Reserved By
-        <a href="https://html.design/">Free Html Templates</a>
-      </p>
-    </div>
-  </footer>
-  <!-- footer section -->
-
-  <script src="js/jquery-3.4.1.min.js"></script>
-  <script src="js/bootstrap.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
-  </script>
-  <script src="js/custom.js"></script>
-  <!-- Google Map -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>
-  <!-- End Google Map -->
-
-
-</body>
-
+          emailjs.sendForm(serviceID, templateID, contactForm).then(
+            () => {
+              alert(
+                'We have received your enquiry and will contact you soon. Thank you.'
+              );
+              window.location.href = '/contact.html';
+            },
+            (err) => {
+              console.log(err);
+              const { status, text } = err;
+              if (status == 400 && text.startsWith('reCAPTCHA')) {
+                alert('Please check the captcha');
+              }
+              submitButton.disabled = false;
+            }
+          );
+        });
+    </script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  </body>
 </html>

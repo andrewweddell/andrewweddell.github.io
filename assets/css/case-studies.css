@@ -1,0 +1,181 @@
+.toHome p {
+  margin-bottom: 0;
+}
+
+.blob {
+  text-align: center;
+  border-radius: 59% 41% 59% 41% / 55% 50% 50% 45%;
+  border-width: 32px;
+  border-style: solid;
+  padding: 72px 16px;
+  height: 360px;
+  max-height: 360px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.blob h2 {
+  color: white;
+}
+
+.challenge div[class^="col-"]:not(.blob) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 54px;
+  padding-right: 54px;
+  /* font-size: 18px; */
+  color: #555;
+}
+
+.challenge div[class^="col-"] {
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.solution .feature-title {
+  margin-left: -40px;
+}
+
+.result {
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+
+p {
+  letter-spacing: 0.5px;
+}
+
+.clientTestimonial p {
+  /* font-size: 18px; */
+  color: #555;
+  letter-spacing: 1px;
+}
+
+.result .products {
+  padding-left: 0;
+  padding-bottom: 16px;
+}
+
+.result .products p {
+  /* font-size: 24px; */
+  padding-left: 12px;
+}
+
+.clientTestimonial i {
+  font-size: 30px;
+  padding-bottom: 24px;
+  padding-top: 16px;
+  font-weight: 900;
+}
+
+.client-name {
+  font-size: 25px;
+  letter-spacing: 1.25px;
+  font-weight: 600;
+}
+
+.client-title {
+  font-style: italic;
+}
+
+.clientTestimonial i {
+  color: black;
+}
+
+/* Integrity specific styles */
+.integrity .blob {
+  background-color: #8a199c;
+  border-color: #8a199c;
+}
+
+.integrity .highlight {
+  color: #8a199c;
+  font-weight: 600;
+}
+
+.integrity .client-name {
+  color: #8a199c;
+}
+
+.integrity h5.subtitle,
+.integrity .toHome p {
+  color: #8a199c;
+}
+
+.integrity .button {
+  background-color: #8a199c;
+}
+
+/* Point specific styles */
+.point .blob {
+  background-color: #ac1f3a;
+  border-color: #ac1f3a;
+}
+
+.point .highlight {
+  color: #ac1f3a;
+  font-weight: 600;
+}
+
+.point .client-name {
+  color: #ac1f3a;
+}
+
+.point h5.subtitle,
+.point .toHome p {
+  color: #ac1f3a;
+}
+
+.point .button {
+  background-color: #ac1f3a;
+}
+
+/* Community specific styles */
+.community .blob {
+  background-color: #133c68;
+  border-color: #133c68;
+}
+
+.community .highlight {
+  color: #133c68;
+  font-weight: 600;
+}
+
+.community .client-name {
+  color: #133c68;
+}
+
+.community h5.subtitle,
+.community .toHome p {
+  color: #133c68;
+}
+
+.community .button {
+  background-color: #133c68;
+}
+
+/* Hollard specific styles */
+.hollard .blob {
+  background-color: #e64e00;
+  border-color: #e64e00;
+}
+
+.hollard .highlight {
+  color: #e64e00;
+  font-weight: 600;
+}
+
+.hollard .client-name {
+  color: #e64e00;
+}
+
+.hollard h5.subtitle,
+.hollard .toHome p {
+  color: #e64e00;
+}
+
+.hollard .button {
+  background-color: #e64e00;
+}

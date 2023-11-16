@@ -1,0 +1,176 @@
+.title {
+  font-size: 32px;
+  font-weight: bold;
+  letter-spacing: 1.25px;
+}
+
+.result-section {
+  display: flex;
+  align-items: center;
+}
+
+.result-section div {
+  max-width: 500px;
+  border-radius: 50% 50% 61% 39% / 51% 57% 43% 49%;
+  border: 48px solid #ffeb3b;
+  background: #ffeb3b;
+}
+
+.result-section p.title {
+  text-align: center;
+  font-weight: 600;
+  color: #2f4482;
+  letter-spacing: 2px;
+  font-size: 22px;
+}
+
+.result-section p.content {
+  font-weight: 400;
+  color: #2f4482;
+  letter-spacing: 0.3px;
+  font-size: 16px;
+}
+
+/* Medium Devices, Desktops */
+/* @media only screen and (max-width: 1200px) {
+  .result-section p.title {
+    font-size: 18px;
+  }
+
+  .result-section p.content {
+    font-size: 15px;
+  }
+
+  .subtitle p {
+    font-size: 16px;
+  }
+
+  .subtitle li {
+    font-size: 14px;
+  }
+} */
+
+/* Small Devices, Tablets */
+/* @media only screen and (max-width: 768px) {
+  .result-section div {
+    text-align: center;
+  }
+
+  .subtitle p {
+    font-size: 15px;
+  }
+
+  .subtitle li {
+    font-size: 13px;
+  }
+} */
+
+
+.feature {
+  display: flex;
+  flex-direction: column;
+  /* padding: 24px 16px; */
+  align-items: center;
+}
+
+.feature img {
+  width: 100%;
+}
+
+@media only screen and (max-width: 425px) {
+  .feature img {
+    width: 70%;
+  }
+}
+
+.feature-title {
+  letter-spacing: 1.2px;
+  /* font-size: 20px; */
+  font-weight: 500;
+}
+
+.discovery,
+.execution {
+  color: #4b5b6d;
+}
+
+.planning,
+.ongoing {
+  color: #3279aa;
+}
+
+.alignment {
+  color: #3fadce;
+}
+
+.horizontal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+.horizontal img {
+  max-width: 64px;
+  max-height: 64px;
+}
+
+.horizontal img:first-child {
+  max-width: 45px;
+}
+
+.horizontal .horizontal__text h5 {
+  margin-bottom: 18px;
+  font-weight: 700;
+}
+
+.horizontal .horizontal__text {
+  margin-left: 30px;
+}
+
+.toContact {
+  padding: 48px 15px;
+}
+
+.toContact h2 {
+  font-size: 34px;
+  letter-spacing: 0.7px;
+  color: #111518;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.toContact .button {
+  max-width: 320px;
+  min-height: 75px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: 700;
+  outline: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  background: #216dd2;
+  color: #fff;
+  border-radius: 6px;
+}
+
+.toContact .button:hover {
+  background: rgba(33, 109, 210, 0.8);
+  color: white;
+}
+
+.toContact .button:before {
+  content: url(../../assets/img/mail.svg);
+  margin-right: 20px;
+}

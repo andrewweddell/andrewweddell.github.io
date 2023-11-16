@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <title>APPSURE - DATA PLATFORM</title>
+
+  <!-- Styles -->
+  <link href="../assets/css/page.css" rel="stylesheet">
+  <link href="../assets/css/style.css" rel="stylesheet">
+  <link href="../assets/css/services.css" rel="stylesheet">
+  <link href="/assets/css/font-styling.css" rel="stylesheet">
+
+  <link rel="apple-touch-icon" href="assets/img/favicon.png">
+  <link rel="icon" href="assets/img/favicon.png">
+
+  <style>
+    .overview-image {
+      text-align: center;
+    }
+
+    .overview-image img:hover {
+      /* transform: scale(1.15); */
+      cursor: pointer;
+    }
+
+    #overviewImage button {
+      position: absolute;
+      top: 12px;
+      right: 16px;
+      z-index: 9999;
+    }
+  </style>
+
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-stick-dark" data-navbar="sticky">
+    <div class="container">
+
+      <div class="navbar-left navbar-dark">
+        <button onclick="openNavbar()" class="navbar-toggler" type="button"><span class="navbar-toggler-icon"></span></button>
+        <a class="navbar-brand" href="/Index.html">
+          <img class="logo-light" src="/assets/img/logos/appsure-logo.png" alt="logo">
+          <!-- <img class="logo-light" src="assets/img/logo-light.png" alt="logo"> -->
+        </a>
+      </div>
+      <section class="navbar-mobile">
+        <ul class="nav nav-navbar">
+          <a class="nav-link" href="/about.html">About</a>
+          <a class="nav-link" href="/case-studies.html">Case Studies</a>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Services<span class="arrow"></span></a>
+            <nav class="nav nav-sub">
+              <a class="nav-link" href="/services/solution.html">Appsure Solution</a>
+              <a class="nav-link" href="/services/web-development.html">Web & App Development</a>
+              <a class="nav-link" href="/services/data-flatform.html">Modern Data Platform</a>
+              <a class="nav-link" href="/services/business-automation.html">Business Process
+                Automation</a>
+            </nav>
+          </li>
+          <a class="nav-link" href="/brochures.html">Brochures</a>
+          <a class="nav-link" href="/contact.html">Contact Us</a>
+        </ul>
+      </section>
+    </div>
+  </nav>
+
+
+  <!-- Header -->
+
+  <header class="header">
+    <div class="container aboutUs dark">
+      <a href="/Index.html" class="toHome d-none d-md-inline-flex">
+        <img src="/assets/img/arrow_left_blue.svg" alt="" class="arrow_left">
+        <span title="Home" class="back-home">Home</span>
+      </a>
+      <h1 class="text-bold">Data Platform</h1>
+      <!-- <h3 class="subtitle">
+        Future Web Platform
+      </h3> -->
+      <p class="mainText">
+        Using Microsoft Azure, we build modern data platforms with Data Bricks and Azure Data Factory and use Power BI
+        for in memory reporting.
+      </p>
+      <div class="socials">
+        <a href="https://www.linkedin.com/company/appsureau/" class="social social" target="_blank">
+          <img src="/assets/img/in.svg" alt="">
+        </a>
+      </div>
+    </div>
+  </header><!-- /.header -->
+
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <section class="creation">
+      <h1 class="text-bold" style="text-align: center;">Advanced Analytics Target Architecture</h1>
+      <div class="container data-platform overview-image">
+        <img src="/assets/img/data_platform.png">
+      </div>
+    </section>
+
+    <section class="creation">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="horizontal">
+              <div class="horizontal__text">
+                <h5 class="text-bold">1. Ingestion Process</h5>
+                <p>
+                  The ingestion process will load data from a variety of different data sources (structured or
+                  unstructured) and persist them in a central data lake storage (data store).
+                </p>
+                <p>A common digestion pattern will be explained at the end of this document</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="horizontal">
+              <div class="horizontal__text">
+                <h5 class="text-bold">2. Store</h5>
+                <p>
+                  Ingested (raw) datasets (and business-ready datasets) will be stored in designated areas of
+                  <strong>Azure Data Lake</strong>. Datasets in the raw area (folders) will be useful for
+                  troubleshooting as well as meeting auditing and regulatory requirements.
+                </p>
+                <p>On the other hand, permitted business users can access raw or processed datasets as the source of
+                  truth for specific analytics or reporting needs. As an example, data scientists can have a controlled
+                  access (through Azure Active Directory) to their related datasets and then feed them to azure ML
+                  services or Databricks machine learning library.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="horizontal">
+              <div class="horizontal__text">
+                <h5 class="text-bold">3. Processing (prep and train)</h5>
+                <p> This architecture considers Azure Databricks service as the main processing engine. </p>
+                <p>Databricks easily links to data lake storage, process and augments different data types and prepare
+                  and land business-ready datasets in a specific area (folder) of data lake.</p>
+                <p>While Databricks is processing data, it can leverage a notification mechanism by connecting to azure
+                  logic apps and functions.</p>
+                <p>On the other hand, there is a need to supply updated historical datasets to the business via data
+                  serving layer. A layer is well suited for business intelligence and ad-hoc relational querying.</p>
+                <p>To satisfy this requirement, Databricks has another feature. It can organise data in relational-like
+                  databases on top of its file system.</p>
+                <p>Databricks can connect to Azure SQL Data warehouse by utilising JDBC connections and push its
+                  internal database entities through</p>
+                <p>This mechanism uses polybase under the hood which can get best of Azure SQL Data Warehouse massive
+                  parallel processing capabilities. This is a very fast process and can move gigabytes of data in a few
+                  minutes.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="horizontal">
+              <div class="horizontal__text">
+                <h5 class="text-bold">4. Data Service Layer</h5>
+                <p>
+                  The architecture supports serving data both via data store (data lake) and the relational type store
+                  which can be Azure SQL Data Warehouse or Azure Analysis Services.
+                </p>
+                <p>Datasets which have been processed and loaded into Azure SQL Data Warehouse will feed Azure Analysis
+                  Services (Tabular Models) in the final stage.</p>
+                <p>Azure Analysis Services is fully optimised to server Power BI and Excel services. It is the
+                  recommended portal for enterprise usage and provides a comprehensive level of security management and
+                  governing capabilities</p>
+                <p>It also separates business logics from reporting tools and centralises metrics definitions across the
+                  business. </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="horizontal">
+              <div class="horizontal__text">
+                <h5 class="text-bold">5. Why Azure Databricks</h5>
+                <p>
+                  Azure Databricks provides Apache Spark power and capabilities as a service in Azure platform.
+                </p>
+                <p>It is an in-memory parallel processing system which can run X100 times faster than traditional
+                  map-reduce jobs.</p>
+                <p>Azure Databricks covers four main popular areas in one solution so it is an ideal tool set to deal
+                  with a variety of data processing and analytics requirements:</p>
+                  <ul class="list-square">
+                  <li><p>Spark SQL: provides access to data through popular SQL like commands</p></li>
+                  <li><p>Spark Streaming: Support Real-time Live streams of data</p></li>
+                  <li><p>GraphX: A comprehensive graph processing framework</p></li>
+                  <li><p>ML Machine Learning Library: A distributed machine learning framework</p></li>
+                </ul>
+                <p>Using Azure Databricks in this architecture brings a wide range of features and flexibilities to the
+                  table:</p>
+                <ul class="list-square">
+                  <li><p>It is easy to setup and scale</p></li>
+                  <li><p>oIt can digest and process large amount of data receiving through a variety of connection types
+                    such as ftp, email or RDBMS connections (one single engine).</p></li>
+                  <li><p>Decoupling digestion and transformation logic from orchestration mechanism (ADF) in a very easy
+                    way. Queries and business logics are implemented in notebooks. ADF is only responsible for setting
+                    parameters and running notebooks.</p></li>
+                  <li><p>Maintenance and extension made easy! Majority of logic will be written in SQL and Python (Java, R
+                    and Scala are also supported)</p></li>
+                  <li><p>Implementing different data loading patterns (e.g. SCD) with an outstanding level of performance
+                  </p></li>
+                  <li><p>It can link to data storage (Azure Data Lake) through AAD</p></li>
+                  <li><p>All source codes (notebooks) will easily link to git repositories</p></li>
+                  <li><p>It supports DevOps principals</p></li>
+                  <li><p>It is easy to share workspaces and logics between different teams of developers</p></li>
+                  <li><p>Databricks can use Azure security Key Vaults which eliminates hard-coding credentials in the
+                    source codes</p></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="horizontal">
+              <div class="horizontal__text">
+                <h5 class="text-bold">6. Ingestion Pattern</h5>
+                <p>
+                  It is very common for a data platform to receive data via secure ftp services or as attachments to
+                  standard emails.
+                </p>
+                <p>Digesting these type of information needs a specific pattern to ensure incoming data is stored in the
+                  data store (azure data lake storage) and processed as soon as they have received.</p>
+                <p>Following diagram depicts a practiced pattern to implement digestion process for ftp and email data
+                  sources:</p>
+                <p>In this pattern, an Azure app listens to the blob storage and as soon as a new file is landed:</p>
+                <ul class="list-square">
+                  <li><p>
+                    Another function retrieves metadata such as ADF pipeline name and destination path in Data Lake.
+                    Then it sends the information to logic apps
+                  </li>
+                  <li><p>Logic apps moves the data from blob storage to data lake destination folder</li>
+                  <li><p>Logic apps uses supplied parameters to trigger appropriate ADF (workflow)</li>
+                  <li><p>Logic apps are also responsible to provide an adequate level of notifications</li>
+                  <li><p>Then ADF pipeline will send file name and other meta data to run related Databricks notebook
+                    which will process raw data and makes it ready for business use</li>
+                </ul>
+                <p>The mechanics of processing email attachments are very similar except for the fact that the data
+                  needs to be read from a standard attached file format.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="toContact">
+      <div class="container">
+        <h3 class="text-bold">Have a project? Let’s make it together!</h3>
+        <a href="/contact.html" class="button">Contact us</a>
+      </div>
+    </section>
+  </main>
+    <!-- Footer -->
+    <footer class="footer-bg position-relative">
+      <img src="/assets/img/Appsure_Website_footer.png" alt="Appsure footer">
+      <div class="footer-content">
+        <div class="d-flex">
+          <div class="footer-text">
+            <p>Appsure-Australia Pty Ltd</p>
+            <p>ABN 62 620 741 988</p>
+          </div>
+          <div>
+            <a href="https://www.linkedin.com/company/appsureau/" class="social social" target="_blank">
+              <img src="/assets/img/in.svg" alt="">
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+    <!-- Scripts -->
+    <script src="/assets/js/page.js"></script>
+    <script src="/assets/js/script.js"></script>
+    <script src="/assets/js/navbar.js"></script>
+
+</body>
+
+</html>

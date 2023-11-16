@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <title>APPSURE - CASE STUDIES</title>
+
+  <!-- Styles -->
+  <link href="../assets/css/page.css" rel="stylesheet">
+  <link href="../assets/css/style.css" rel="stylesheet">
+  <link href="../assets/css/about-us.css" rel="stylesheet">
+  <link href="assets/css/font-styling.css" rel="stylesheet">
+  <link rel="apple-touch-icon" href="assets/img/favicon.png">
+  <link rel="icon" href="assets/img/favicon.png">
+
+  <style>
+    .main-content {
+      background: #F5F5F5;
+    }
+
+    .card-container {
+      margin-top: 3rem;
+      width: 100%;
+    }
+
+    .card {
+      background: white;
+      box-shadow: 0px 0px 10px 0px rgba(204, 204, 204, 0.48);
+      height: 220px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .card-image {
+      height: 100%;
+      transition: transform 0.3s, opacity 0.5s;
+    }
+
+    .card:hover .card-image {
+      transform: scale(1.15);
+      opacity: 0.8;
+    }
+
+    .card:hover h4,
+    .card:hover a {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+
+    .card-content {
+      position: absolute;
+      top: 33%;
+      left: 24px;
+    }
+
+    .card-content h4,
+    .card-button {
+      display: inline-block;
+      margin: 0 0 0.25em;
+      padding: 0.4em 1em;
+      background: rgba(255, 255, 255, 0.9);
+      text-transform: none;
+      -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+      transition: opacity 0.35s, transform 0.35s;
+      -webkit-transform: translate3d(-130%, 0, 0);
+      transform: translate3d(-130%, 0, 0);
+    }
+
+    .card-content p {
+      color: black;
+      margin-bottom: 8px;
+      padding: 4px 8px;
+      -webkit-transition-delay: 0s;
+      transition-delay: 0s;
+    }
+
+    .card-button {
+      color: black !important;
+      padding: 4px 8px;
+      border: 2px solid #fff;
+      width: fit-content;
+      font-weight: 600;
+      cursor: pointer;
+      -webkit-transition-delay: 0.1s;
+      transition-delay: 0.1s;
+    }
+
+    .hollard {
+      background-image: url(assets/img/hollard.png);
+      background-repeat: round;
+      height: 100%;
+    }
+
+    .community {
+      background-image: url(assets/img/community-underwriting.png);
+      background-repeat: no-repeat;
+      background-size: auto;
+      background-position: center;
+      height: 100%;
+    }
+
+    .int {
+      background-image: url('assets/img/integrity logo.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      height: 100%;
+      margin: 0 10px;
+    }
+
+    .skeleton {
+      margin-left: 10px;
+      width: 90%;
+      height: 16px;
+      margin-top: 12px;
+      border-radius: 7px;
+      background-image: linear-gradient(90deg, #ddd 0px, #e8e8e8 40px, #ddd 80px);
+      background-size: 600px;
+      animation: shine-lines 1.6s infinite linear;
+    }
+
+    .point-underwriting {
+      max-width: 75%;
+    }
+
+    @keyframes shine-lines {
+      0% {
+        background-position: -100px;
+      }
+
+      40%,
+      100% {
+        background-position: 140px;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-stick-dark" data-navbar="sticky">
+    <div class="container">
+
+      <div class="navbar-left">
+        <button onclick="openNavbar()" class="navbar-toggler" type="button"><span
+            class="navbar-toggler-icon"></span></button>
+        <a class="navbar-brand" href="index.html">
+          <img class="logo-dark" src="assets/img/logos/appsure-logo.png" alt="logo">
+          <img class="logo-light" src="assets/img/logos/appsure-logo.png" alt="logo">
+        </a>
+      </div>
+      <section class="navbar-mobile">
+        <ul class="nav nav-navbar">
+          <a class="nav-link" href="/about.html">About</a>
+          <a class="nav-link" href="/case-studies.html">Case Studies</a>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Services<span class="arrow"></span></a>
+            <nav class="nav nav-sub">
+              <a class="nav-link" href="/services/solution.html">Appsure Solution</a>
+              <a class="nav-link" href="/services/web-development.html">Web & App Development</a>
+            <a class="nav-link" href="/services/data-flatform.html">Modern Data Platform</a>
+              <a class="nav-link" href="/services/business-automation.html">Business Process Automation</a>
+            </nav>
+          </li>
+          <a class="nav-link" href="/brochures.html">Brochures</a>
+          <a class="nav-link" href="/contact.html">Contact Us</a>
+        </ul>
+      </section>
+    </div>
+  </nav>
+
+
+  <!-- Header -->
+
+  <header class="header text-white"
+    style="background-image: linear-gradient(-45deg, #061828 0%, #5ac8fa 100%); overflow: hidden;">
+    <!-- <canvas class="constellation" data-color="rgba(255,255,255,0.3)"></canvas> -->
+    <canvas id="nokey"></canvas>
+    <div class="container aboutUs dark">
+      <a href="/Index.html" class="toHome d-none d-md-inline-flex">
+        <img src="./assets/img/arrow_left.svg" alt="" class="arrow_left">
+        <span title="Home" class="back-home">Home</span>
+      </a>
+      <div class="socials">
+        <a href="https://www.linkedin.com/company/appsureau/" class="social social" target="_blank">
+          <img src="./assets/img/in.svg" alt="">
+        </a>
+      </div>
+    </div>
+  </header><!-- /.header -->
+
+
+  <!-- Main Content -->
+  <main class="main-content">
+
+
+    <!--
+      |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+      | Who We Are
+      |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+      !-->
+    <section class="whoWeAre pt-8">
+      <div class="container d-flex flex-wrap">
+        <div class="col-md-6">
+          <img class="point-underwriting" src="assets/img/point.png">
+        </div>
+        <div class="col-md-6">
+          <div>
+            <div>
+              <div>
+                <h1 class="text-bold">Featured Case Study</h1>
+              </div>
+            </div>
+            <div>
+              <div>
+                <div>
+                  <p>Point Underwriting Agency offers next generation Accident and Sickness products that support brokers and their clients.
+                    Their quality underwriting service is built on four cornerstones - people, product, claims and service. Established in 2015, the Point team brings decades of experience.</p>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div>
+                <div>
+                  <a href="/case-studies/point.html" role="button">
+                    <p>View Case Study</p>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex flex-wrap card-container">
+          <div class="col-lg-4 pb-4">
+            <div class="card">
+              <div class="card-image">
+                <div class="hollard"></div>
+              </div>
+              <div class="card-content">
+                <h4 style="font-size: 18px;">A global financial services provider</h4><br>
+                <p class="pl-0" style="font-size: 15px;"><a class="card-button" href="/case-studies/hollard.html">View Case Study</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 pb-4">
+            <div class="card">
+              <div class="card-image" style="background: #347aaa70;">
+                <div class="community"></div>
+              </div>
+              <div class="card-content">
+                <h4 style="font-size: 18px;">Insuring Not For Profits</h4><br>
+                <p class="pl-0" style="font-size: 15px;"><a class="card-button" href="/case-studies/community.html">View Case Study</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 pb-4">
+            <div class="card">
+              <div class="card-image" style="background: #ffffff;">
+                <div class="int"></div>
+              </div>
+              <div class="card-content">
+                <h4 style="font-size: 18px;">Full Insurance solution and broker portal</h4><br>
+                <p class="pl-0" style="font-size: 15px;"><a class="card-button" href="/case-studies/integrity.html">View Case Study</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+    <!-- Footer -->
+    <footer class="footer-bg position-relative">
+      <img src="/assets/img/Appsure_Website_footer.png" alt="Appsure footer">
+      <div class="footer-content">
+        <div class="d-flex">
+          <div class="footer-text">
+            <p>Appsure-Australia Pty Ltd</p>
+            <p>ABN 62 620 741 988</p>
+          </div>
+          <div>
+            <a href="https://www.linkedin.com/company/appsureau/" class="social social" target="_blank">
+              <img src="./assets/img/in.svg" alt="">
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+    <!-- Scripts -->
+    <script src="assets/js/page.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/navbar.js"></script>
+    <script>
+      $(window).scroll(function () {
+        const bodyEl = $('body');
+        const scrolled = bodyEl.hasClass('header-scrolled');
+        const nav = $('.navbar-left');
+        if (scrolled) {
+          nav.addClass('navbar-dark')
+        } else {
+          nav.removeClass('navbar-dark')
+        }
+      });
+    </script>
+</body>
+
+</html>

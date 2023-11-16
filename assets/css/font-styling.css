@@ -1,0 +1,35 @@
+.list-item {
+  position: relative;
+}
+
+.list-item .item-icon {
+  width: 1.2rem;
+  position: absolute;
+  top: 0;
+  left: -1.8rem;
+  margin-top: 0.5rem;
+}
+
+.list-square {
+  list-style: square;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+.text-white {
+  color: white;
+}
+
+.form-group {
+  margin-bottom: 2rem;
+}
+
+.container .aboutUs {
+  z-index: 9999;
+}
+
+.header > .container, .header > .container-fluid {
+  z-index: 2;
+}

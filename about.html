@@ -1,216 +1,917 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <!-- Basic -->
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <!-- Mobile Metas -->
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <!-- Site Metas -->
-  <meta name="keywords" content="" />
-  <meta name="description" content="" />
-  <meta name="author" content="" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
 
-  <title>Inance</title>
+  <title>APPSURE - ABOUT US</title>
 
-  <!-- slider stylesheet -->
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
-  <!-- bootstrap core css -->
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
-  <!-- font awesome style -->
-  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+  <!-- Styles -->
+  <link href="../assets/css/page.css" rel="stylesheet">
+  <link href="../assets/css/style.css" rel="stylesheet">
+  <link href="../assets/css/about-us.css" rel="stylesheet">
+  <link href="assets/css/font-styling.css" rel="stylesheet">
+  <link rel="apple-touch-icon" href="assets/img/favicon.png">
+  <link rel="icon" href="assets/img/favicon.png">
 
-  <!-- Custom styles for this template -->
-  <link href="css/style.css" rel="stylesheet" />
-  <!-- responsive style -->
-  <link href="css/responsive.css" rel="stylesheet" />
-
+  <style>
+    .content-white {
+      color: #fff;
+    }
+  </style>
 </head>
 
 <body>
-  <div class="hero_area">
-    <!-- header section strats -->
-    <header class="header_section">
-      <div class="header_top">
-        <div class="container-fluid">
-          <div class="contact_nav">
-            <a href="">
-              <i class="fa fa-phone" aria-hidden="true"></i>
-              <span>
-                Call : +01 123455678990
-              </span>
-            </a>
-            <a href="">
-              <i class="fa fa-envelope" aria-hidden="true"></i>
-              <span>
-                Email : demo@gmail.com
-              </span>
-            </a>
+
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-stick-dark" data-navbar="sticky">
+    <div class="container">
+
+      <div class="navbar-left">
+        <button onclick="openNavbar()" class="navbar-toggler" type="button"><span
+            class="navbar-toggler-icon"></span></button>
+        <a class="navbar-brand" href="index.html">
+          <img class="logo-dark" src="assets/img/logos/appsure-logo.png" alt="logo">
+          <img class="logo-light" src="assets/img/logos/appsure-logo.png" alt="logo">
+        </a>
+      </div>
+      <section class="navbar-mobile">
+        <ul class="nav nav-navbar">
+          <a class="nav-link" href="/about.html">About</a>
+          <a class="nav-link" href="/case-studies.html">Case Studies</a>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Services<span class="arrow"></span></a>
+            <nav class="nav nav-sub">
+              <a class="nav-link" href="/services/solution.html">Appsure Solution</a>
+              <a class="nav-link" href="/services/web-development.html">Web & App Development</a>
+              <a class="nav-link" href="/services/data-flatform.html">Modern Data Platform</a>
+              <a class="nav-link" href="/services/business-automation.html">Business Process Automation</a>
+            </nav>
+          </li>
+          <a class="nav-link" href="/brochures.html">Brochures</a>
+          <a class="nav-link" href="/contact.html">Contact Us</a>
+        </ul>
+      </section>
+    </div>
+  </nav>
+
+
+  <!-- Header -->
+
+  <header class="header text-white"
+    style="background-image: linear-gradient(-45deg, #061828 0%, #5ac8fa 100%); overflow: hidden;">
+    <!-- <canvas class="constellation" data-color="rgba(255,255,255,0.3)"></canvas> -->
+    <canvas id="nokey"></canvas>
+    <div class="container aboutUs dark">
+      <!-- <a href="/Index.html" class="toHome d-none d-md-inline-flex">
+        <img src="./assets/img/arrow_left.svg" alt="" class="arrow_left">
+        <span title="Home" class="back-home">Home</span>
+      </a> -->
+      <h1 class="aboutUs-title">About us</h1>
+      <div class="d-flex justify-content-sm-start justify-content-start justify-content-lg-between">
+        <span></span>
+        <p class="mainText content-white line-1">
+          The <span class="fw-600">Appsure team</span> are <span class="fw-600">problem-solving experts</span> when it comes to insurance technology
+        </p>
+      </div>
+
+      <div class="d-flex justify-content-sm-start justify-content-start justify-content-lg-between">
+        <p class="mainText content-white line-2">
+          Our mission is to offer innovative, flexible, efficient solutions to enable the swift launching and operating of new products in a way that works best for our customers
+        </p>
+      </div>
+      <div class="d-flex justify-content-sm-start justify-content-start justify-content-lg-between">
+        <p class="mainText content-white line-3">
+          <span class="fw-600 text-white">Appsure is an established solution provider</span> that has globally assisted the insurance industry. Our modern, unified system enhances customer experience and enables agile responses to market threats and opportunities.
+         </p>
+      </div>
+
+
+      <!-- <div class="socials">
+        <a href="https://www.linkedin.com/company/appsureau/" class="social social" target="_blank">
+          <img src="./assets/img/in.svg" alt="">
+        </a>
+      </div> -->
+    </div>
+  </header><!-- /.header -->
+
+
+  <!-- Main Content -->
+  <main class="main-content">
+
+
+    <!--
+      |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+      | Who We Are
+      |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+      !-->
+    <section class="whoWeAre pt-8">
+      <div class="container">
+        <h1 class="text-bold">Who we are?</h1>
+        <h5 class="text-bold">We are your most committed insurance technology solution partner, combining excellent technology, great people and a partnership approach to working with our customers. </h5>
+        <p>Our team of seasoned insurance professionals and technologists aim to build products that solve real problems for our customers, whilst providing robust and reliable support for all aspects of insurance operations.</p>
+        <div class="row">
+
+        <br><br>
+          <!--Awards-->
+
+          <div class="col-md-6">
+            <div class="vertical award-box">
+              <div class="box-img">
+                <img src="./assets/img/award1.png" class="img-certificate" alt="">
+
+              </div>
+
+              <div class="horizontal__text ml-3">
+                <h5>We are the proud winners of the
+                  2022 5-Star Technology awards</h5>
+                <a href="https://premium.insurancebusinessmag.com/au-5-star-technology-appsure-australia/p/1" target="_blank">
+                   Click here to read further
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="vertical award-box">
+                     <div class="box-img">
+                      <img src="./assets/img/award2.png" class="img-certificate" alt="">
+
+                     </div>
+
+              <div class="horizontal__text  ml-3">
+                <h5>Most Promising Insurance Tech
+                  Solution Providers for 2021</h5>
+                <p>
+
+                </p>
+              </div>
+            </div>
+            <p class="text-bold vertical__text">Awarded by <span class="text-red">CIO</span>Review APAC</p>
+
           </div>
         </div>
       </div>
-      <div class="header_bottom">
-        <div class="container-fluid">
-          <nav class="navbar navbar-expand-lg custom_nav-container ">
-            <a class="navbar-brand" href="index.html">
-              <span>
-                Inance
-              </span>
-            </a>
-
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class=""> </span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav ">
-                <li class="nav-item ">
-                  <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item active">
-                  <a class="nav-link" href="about.html"> About</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="service.html">Services</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="contact.html">Contact Us</a>
-                </li>
-              </ul>
+         <br><br> <br><br>
+      <div class="presudo-whoWeAre">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="horizontal horizontal-block">
+              <img src="./assets/img/About_InnovationInspired.svg" alt="">
+              <div class="horizontal__text">
+                <h3>Innovation inspired</h3>
+                <p>
+                  With the evolution of cloud solution architecture, we are experts in identifying and implementing the
+                  optimal solution for your business.
+                </p>
+              </div>
             </div>
-          </nav>
+          </div>
+
+          <div class="col-md-6">
+            <div class="horizontal horizontal-block">
+              <img src="./assets/img/about_openminded.svg" alt="">
+              <div class="horizontal__text">
+                <h3>Open minded</h3>
+                <p>
+                  With our willingness to embrace change within our industry, we are always searching for challenging
+                  ideas resulting in positive outcomes.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="horizontal horizontal-block">
+              <img src="./assets/img/about_clientandresult.svg" alt="">
+              <div class="horizontal__text">
+                <h3>Client and result oriented</h3>
+                <p>
+                  Collaboration in our
+                  5-Step process enables optimal client outcomes, through valuing your business ideas and needs.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="horizontal horizontal-block">
+              <img src="./assets/img/about_technology focused.svg" alt="">
+              <div class="horizontal__text">
+                <h3>Technology focused</h3>
+                <p>
+                  Our team is passionate about technology and provides innovative solutions to optimize and streamline
+                  business processes with our focus and expertise in the insurance space.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </header>
-    <!-- end header section -->
+    </div>
+    </section>
+
+    <!--
+      |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+      | Our people
+      |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+      !-->
+    <section class="ourPeople" id="people">
+      <div class="container">
+        <h1 class="text-bold">Our People
+          <h5 class="text-bold">We're a Responsive Team</h5>
+        </h1>
+        <div class="row pb-8 align-items-center">
+          <div class="col-md-7 col-xs-12">
+            <p>Our Sydney based team of highly skilled professionals is made up of:</p>
+            <ul class="list-square">
+              <li>
+                <p>Senior Business Analysts</p>
+              </li>
+              <li>
+                <p>Solution Architects</p>
+              </li>
+              <li>
+                <p>Development Leads</p>
+              </li>
+            </ul>
+            <p>We work alongside you to make sure solutions meet your needs, are delivered on time and meet our
+              high-quality standards.</p>
+          </div>
+          <div class="col-md-5 col-xs-12">
+            <div>
+              <img src="assets/img/people.svg">
+            </div>
+          </div>
+        </div>
+
+        <!-- Team leaders -->
+
+        <p class="sectionSubtitle">Our team leaders and innovators who live and breathe insurance and technology
+          ensuring project success include:</p>
+        <div class="row py-12 justify-content-center">
+          <div class="col-lg-4 col-md-4 col-xs-12 d-flex flex-column" data-aos="fade-up" data-aos-duration="500" data-toggle="modal"
+            data-target="#MarkHutson">
+            <div class="people">
+              <img src="assets/img/people/Mark.jpg">
+
+            </div>
+            <p class="people-label">Mark Hutson</p>
+            <p class="people-title">Managing Director</p>
+          </div>
+
+          <div class="col-lg-4 col-md-4 col-xs-12 d-flex flex-column" data-aos="fade-up" data-aos-duration="900"
+          data-aos-duration="700" data-toggle="modal" data-target="#AndrewWeddell">
+          <div class="people">
+            <img src="assets/img/people/Andrew.jpg">
+          </div>
+          <p class="people-label">Andrew Weddell</p>
+          <p class="people-title">Product Owner</p>
+        </div>
+
+          <div class="col-lg-4 col-md-4 col-xs-12 d-flex flex-column" data-aos="fade-up" data-aos-duration="700" data-toggle="modal"
+            data-target="#WesleyWerner">
+            <div class="people">
+              <img src="assets/img/people/Wesley.jpg">
+            </div>
+            <p class="people-label">Wesley Werner</p>
+            <p class="people-title">Senior Software Engineer</p>
+
+          </div>
+
+          <div class="col-lg-4 col-md-4 col-xs-12 d-flex flex-column" data-aos="fade-up" data-aos-duration="500" data-toggle="modal"
+            data-target="#AngelaTerreblanche">
+            <div class="people">
+              <img src="assets/img/people/Angela.jpg">
+            </div>
+            <p class="people-label">Angela Terreblanche</p>
+            <p class="people-title">Business Analyst</p>
+          </div>
+          <div class="col-lg-4 col-md-4 col-xs-12 d-flex flex-column" data-aos="fade-up" data-aos-duration="500" data-toggle="modal"
+          data-target="#PaulvanColler">
+          <div class="people">
+            <img src="assets/img/people/Paul.jpg">
+          </div>
+          <p class="people-label">Paul van Coller</p>
+          <p class="people-title">Senior Developer</p>
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-xs-12 d-flex flex-column" data-aos="fade-up" data-aos-duration="500" data-toggle="modal"
+        data-target="#ReinhardtWijaya">
+        <div class="people">
+          <img src="assets/img/people/Reinhardt.jpg">
+        </div>
+        <p class="people-label">Reinhardt Wijaya</p>
+        <p class="people-title">Business Analyst</p>
+      </div>
+  <div class="col-lg-4 col-md-4 col-xs-12 d-flex flex-column" data-aos="fade-up" data-aos-duration="500" data-toggle="modal"
+    data-target="#AllanWang">
+    <div class="people">
+      <img src="assets/img/people/Allan.jpg">
+    </div>
+    <p class="people-label">Allan Wang</p>
+    <p class="people-title">Technical Business Analyst</p>
   </div>
-
-  <!-- about section -->
-
-  <section class="about_section layout_padding">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-5 col-md-6">
-          <div class="detail-box">
-            <h2>
-              About us
-            </h2>
-            <p>
-              There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomisedThere are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised
-            </p>
-            <a href="">
-              Read More
-            </a>
+  <div class="col-lg-4 col-md-4 col-xs-12 d-flex flex-column" data-aos="fade-up" data-aos-duration="500" data-toggle="modal"
+    data-target="#DerekvanWyk">
+    <div class="people">
+      <img src="assets/img/people/Derek.jpg">
+    </div>
+    <p class="people-label">Derek van Wyk</p>
+    <p class="people-title">Technical Business Analyst</p>
+  </div>
+  <div class="col-lg-4 col-md-4 col-xs-12 d-flex flex-column" data-aos="fade-up" data-aos-duration="500" data-toggle="modal"
+    data-target="#MarianHutson">
+    <div class="people">
+      <img src="assets/img/people/Marian.jpg">
+    </div>
+    <p class="people-label">Marian Hutson</p>
+    <p class="people-title">Legal, Compliance, Marketing</p>
+  </div>
+        <div
+                  class="col-lg-4 col-md-4 col-xs-12 d-flex flex-column"
+                  data-aos="fade-up"
+                  data-aos-duration="500"
+                  data-toggle="modal"
+                  data-target="#LiamHuang"
+          >
+            <div class="people">
+              <img src="assets/img/people/liam.jpg" />
+            </div>
+            <p class="people-label">Liam Huang</p>
+            <p class="people-title">Technical Business Analyst</p>
           </div>
         </div>
-        <div class="col-lg-7 col-md-6">
-          <div class="img-box">
-            <img src="images/about-img.jpg" alt="">
+        </div>
+
+    </section>
+
+    <div class="hover-area" id="hover-area-61a88cd3153a8" style="pointer-events: all; position: absolute; width: 280px; height: 412px; left: 0px; top: 0px; border-radius: 15px; cursor: inherit; z-index: 87;"></div>
+    <!--
+      |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+      | Our partners
+      |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+      !-->
+    <section class="ourPartner">
+      <div class="container">
+        <h2>Our Partners</h2>
+        <div class="row">
+          <div class="col-lg-4 col-md-6 col-xs-12 d-flex " data-aos="fade-up" data-aos-duration="300" >
+            <div class="feature spacing-bottom">
+              <a href="#">
+                <img src="assets/img/canopius-img-0.png">
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-xs-12 d-flex" data-aos="fade-up" data-aos-duration="300" data-aos-delay="100">
+            <div class="feature ">
+              <a href="case-studies/integrity.html">
+                <img src="assets/img/integrity logo.png">
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-xs-12 d-flex" data-aos="fade-up"  data-aos-duration="300" data-aos-delay="200">
+            <div class="feature">
+              <a href="case-studies/point.html">
+                <img src="assets/img/Point_Insurance_-nextGen_arrow_horiz_Lo_Res.jpeg">
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-xs-12 d-flex" data-aos="fade-up"  data-aos-duration="500" data-aos-delay="100">
+            <div class="feature">
+              <a href="case-studies/hollard.html">
+                <img src="assets/img/Hollard logo.png">
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-xs-12 d-flex" data-aos="fade-up"  data-aos-duration="500" data-aos-delay="200">
+            <div class="feature">
+              <a href="case-studies/community.html">
+                <img src="assets/img/Community Underwriting logo.png">
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-xs-12 d-flex" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200" >
+            <div class="feature">
+              <a href="#">
+                <img src="assets/img/microsoft-logo.png" />
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-xs-12 d-flex" data-aos="fade-up"  data-aos-duration="500" data-aos-delay="200">
+            <div class="feature">
+              <a href="#">
+                <img src="assets/img/redhat-logo.png" />
+                <h6 class="feature-title">Appsure's partnership with Red Hat</h6>
+                <p class="feature-content">
+                  With the increasing demands on insurtech to manage
+                  multifaceted and intricate environments in business models
+                  and practices, designed around the use of APIs in a
+                  digital economy, Appsure's utilisation of Red Hat's
+                  modular integration solutions affords our customers the
+                  simplicity of connecting data and applications on any
+                  infrastructure, quickly and cost effectively.
+                </p>
+              </a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- end about section -->
 
-  <!-- info section -->
-  <section class="info_section ">
-    <div class="container">
-      <h4>
-        Get In Touch
-      </h4>
-      <div class="row">
-        <div class="col-lg-10 mx-auto">
-          <div class="info_items">
-            <div class="row">
-              <div class="col-md-4">
-                <a href="">
-                  <div class="item ">
-                    <div class="img-box ">
-                      <i class="fa fa-map-marker" aria-hidden="true"></i>
-                    </div>
-                    <p>
-                      Lorem Ipsum is simply dummy text
-                    </p>
-                  </div>
-                </a>
+    <!--
+      |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+      | Contact
+      |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+      !-->
+    <section class="toContact">
+      <div class="container">
+        <h3 class="text-bold">Have a project? Let’s make it together!</h3>
+          <a href="/contact.html" class="button">Contact us</a>
+      </div>
+    </section>
+  </main>
+    <!-- Footer -->
+    <footer class="footer-bg position-relative">
+      <img src="/assets/img/Appsure_Website_footer.png" alt="Appsure footer">
+      <div class="footer-content">
+        <div class="d-flex">
+          <div class="footer-text">
+            <p>Appsure-Australia Pty Ltd</p>
+            <p>ABN 62 620 741 988</p>
+          </div>
+          <div>
+            <a href="https://www.linkedin.com/company/appsureau/" class="social social" target="_blank">
+              <img src="./assets/img/in.svg" alt="">
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+    <!-- Scripts -->
+    <script src="assets/js/page.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/navbar.js"></script>
+    <script>
+      $(window).scroll(function () {
+        const bodyEl = $('body');
+        const scrolled = bodyEl.hasClass('header-scrolled');
+        const nav = $('.navbar-left');
+        if (scrolled) {
+          nav.addClass('navbar-dark')
+        } else {
+          nav.removeClass('navbar-dark')
+        }
+      });
+    </script>
+
+    <!-- Modal -->
+    <!-- Wesley Werner -->
+    <div class="modal fade" id="WesleyWerner" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <svg xmlns="http://www.w3.org/2000/svg" class="wave" viewBox="0 0 1440 320">
+              <path fill="#3b4a5e" fill-opacity="0.9"
+                d="M0,160L40,138.7C80,117,160,75,240,80C320,85,400,139,480,149.3C560,160,640,128,720,101.3C800,75,880,53,960,64C1040,75,1120,117,1200,128C1280,139,1360,117,1400,106.7L1440,96L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z">
+              </path>
+            </svg>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="row px-3 pb-3 align-items-center">
+              <div class="col-8">
+                <h3 class="person-name">Wesley Werner</h3>
+                <!-- <p class="person-title">Lorem Ipsum</p> -->
               </div>
-              <div class="col-md-4">
-                <a href="">
-                  <div class="item ">
-                    <div class="img-box ">
-                      <i class="fa fa-phone" aria-hidden="true"></i>
-                    </div>
-                    <p>
-                      +02 1234567890
-                    </p>
-                  </div>
-                </a>
+              <div class="col-4">
+                <img src="assets/img/people/Wesley.jpg">
+                <div class="socials">
+                  <a href="https://www.linkedin.com/in/wesley-werner-66b7b71b0/" class="social social" target="_blank">
+                    <img src="./assets/img/in.svg" alt="">
+                  </a>
+                </div>
               </div>
-              <div class="col-md-4">
-                <a href="">
-                  <div class="item ">
-                    <div class="img-box">
-                      <i class="fa fa-envelope" aria-hidden="true"></i>
-                    </div>
-                    <p>
-                      demo@gmail.com
-                    </p>
-                  </div>
-                </a>
-              </div>
+              <p class="col-12 pt-5">Senior Software Developer with cross-functional technical skills, across a variety of technical languages, C#, .NET, .NET Core and SQL. A demonstrated history in the industry specializing in the insurance space, involved in all aspects of the product lifecycle: Planning, technical specification, implementation, and delivery. Skilled at delivering client centric outcomes.
+              </p>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="social-box">
-      <h4>
-        Follow Us
-      </h4>
-      <div class="box">
-        <a href="">
-          <i class="fa fa-facebook" aria-hidden="true"></i>
-        </a>
-        <a href="">
-          <i class="fa fa-twitter" aria-hidden="true"></i>
-        </a>
-        <a href="">
-          <i class="fa fa-youtube" aria-hidden="true"></i>
-        </a>
-        <a href="">
-          <i class="fa fa-instagram" aria-hidden="true"></i>
-        </a>
+    <!-- Andrew Weddell -->
+    <div class="modal fade" id="AndrewWeddell" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <svg xmlns="http://www.w3.org/2000/svg" class="wave" viewBox="0 0 1440 320">
+              <path fill="#3b4a5e" fill-opacity="0.9"
+                d="M0,160L40,138.7C80,117,160,75,240,80C320,85,400,139,480,149.3C560,160,640,128,720,101.3C800,75,880,53,960,64C1040,75,1120,117,1200,128C1280,139,1360,117,1400,106.7L1440,96L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z">
+              </path>
+            </svg>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="row px-3 pb-3 align-items-center">
+              <div class="col-8">
+                <h3 class="person-name">Andrew Weddell</h3>
+                <!-- <p class="person-title">Lorem Ipsum</p> -->
+              </div>
+              <div class="col-4">
+                <img src="assets/img/people/Andrew.jpg">
+                <div class="socials">
+                  <a href="https://www.linkedin.com/in/andrewweddell/" class="social social" target="_blank">
+                    <img src="./assets/img/in.svg" alt="">
+                  </a>
+                </div>
+              </div>
+              <p class="col-12 pt-5">Appsure Product Owner, combining the best of technology, data and product design to execute the product vision. Experienced technical business analyst with a demonstrated history of working in the insurance industry. Skilled in Data Analysis, Business Analysis and Project Management. Strong focus on collaboration between customer and company, with cross-functional teams to deliver the Appsure solution with successful results.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </section>
-
-
-
-  <!-- end info_section -->
-
-  <!-- footer section -->
-  <footer class="footer_section">
-    <div class="container">
-      <p>
-        &copy; <span id="displayDateYear"></span> All Rights Reserved By
-        <a href="https://html.design/">Free Html Templates</a>
-      </p>
+    <!-- Derek van Wyk -->
+    <div class="modal fade" id="DerekvanWyk" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <svg xmlns="http://www.w3.org/2000/svg" class="wave" viewBox="0 0 1440 320">
+              <path fill="#3b4a5e" fill-opacity="0.9"
+                d="M0,160L40,138.7C80,117,160,75,240,80C320,85,400,139,480,149.3C560,160,640,128,720,101.3C800,75,880,53,960,64C1040,75,1120,117,1200,128C1280,139,1360,117,1400,106.7L1440,96L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z">
+              </path>
+            </svg>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="row px-3 pb-3 align-items-center">
+              <div class="col-8">
+                <h3 class="person-name">Derek van Wyk</h3>
+                <!-- <p class="person-title">Lorem Ipsum</p> -->
+              </div>
+              <div class="col-4">
+                <img src="assets/img/people/Derek.jpg">
+                <div class="socials">
+                  <a href="https://www.linkedin.com/in/derek-van-wyk-292a2ab/" class="social social" target="_blank">
+                    <img src="./assets/img/in.svg" alt="">
+                  </a>
+                </div>
+              </div>
+              <p class="col-12 pt-5">Technical business analyst with a strong background in ERP and business intelligence.</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </footer>
-  <!-- footer section -->
+    <!-- Mark Hutson -->
+    <div class="modal fade" id="MarkHutson" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <svg xmlns="http://www.w3.org/2000/svg" class="wave" viewBox="0 0 1440 320">
+              <path fill="#3b4a5e" fill-opacity="0.9"
+                d="M0,160L40,138.7C80,117,160,75,240,80C320,85,400,139,480,149.3C560,160,640,128,720,101.3C800,75,880,53,960,64C1040,75,1120,117,1200,128C1280,139,1360,117,1400,106.7L1440,96L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z">
+              </path>
+            </svg>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="row px-3 pb-3 align-items-center">
+              <div class="col-8">
+                <h3 class="person-name">Mark Hutson</h3>
+                <!-- <p class="person-title">Lorem Ipsum</p> -->
+              </div>
+              <div class="col-4">
+                <img src="assets/img/people/Mark.jpg">
+                <div class="socials">
+                  <a href="https://www.linkedin.com/in/mark-hutson/" class="social social" target="_blank">
+                    <img src="./assets/img/in.svg" alt="">
+                  </a>
+                </div>
+              </div>
+              <p class="col-12 pt-5">Managing Director and founder of Appsure. Extensive global experience in providing insurance solutions to digitise and streamline customer outcomes in modern cloud architecture. Entrepreneurial and innovative approach to delivering products and services to businesses within the Insurance and Financial Services sector. Specialties: Program management, Solution Architecture, Customer Relationship Management and Business Decisions (rules).</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+<!-- Angela Terreblanche -->
+<div class="modal fade" id="AngelaTerreblanche" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <svg xmlns="http://www.w3.org/2000/svg" class="wave" viewBox="0 0 1440 320">
+          <path fill="#3b4a5e" fill-opacity="0.9"
+            d="M0,160L40,138.7C80,117,160,75,240,80C320,85,400,139,480,149.3C560,160,640,128,720,101.3C800,75,880,53,960,64C1040,75,1120,117,1200,128C1280,139,1360,117,1400,106.7L1440,96L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z">
+          </path>
+        </svg>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row px-3 pb-3 align-items-center">
+          <div class="col-8">
+            <h3 class="person-name">Angela Terreblanche</h3>
+            <!-- <p class="person-title">Lorem Ipsum</p> -->
+          </div>
+          <div class="col-4">
+            <img src="assets/img/people/Angela.jpg">
+            <div class="socials">
+              <a href="https://www.linkedin.com/in/Angela--Terreblanche/" class="social social" target="_blank">
+                <img src="./assets/img/in.svg" alt="">
+              </a>
+            </div>
+          </div>
+          <p class="col-12 pt-5">Experienced Business Analyst and Finance Professional (CA) with a demonstrated history working on system implementations, particularly in the Insurance industry. Skilled in business process mapping, understanding finance and accounting processes, financial reporting, banking integration processes, project management and implementing customer centric solutions.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Craig Heunes -->
+<div class="modal fade" id="CraigHeunes" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <svg xmlns="http://www.w3.org/2000/svg" class="wave" viewBox="0 0 1440 320">
+          <path fill="#3b4a5e" fill-opacity="0.9"
+            d="M0,160L40,138.7C80,117,160,75,240,80C320,85,400,139,480,149.3C560,160,640,128,720,101.3C800,75,880,53,960,64C1040,75,1120,117,1200,128C1280,139,1360,117,1400,106.7L1440,96L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z">
+          </path>
+        </svg>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row px-3 pb-3 align-items-center">
+          <div class="col-8">
+            <h3 class="person-name">Craig Heunes</h3>
+            <!-- <p class="person-title">Lorem Ipsum</p> -->
+          </div>
+          <div class="col-4">
+            <img src="assets/img/people/Craig.jpg">
+            <div class="socials">
+              <a href="https://www.linkedin.com/in/Craig--Heunes/" class="social social" target="_blank">
+                <img src="./assets/img/in.svg" alt="">
+              </a>
+            </div>
+          </div>
+          <p class="col-12 pt-5">Dedicated and enthusiastic professional specialising in the management, design, development, implementation, and configuration of Business Intelligence (BI) and analytic reporting solutions.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Paul van Coller -->
+<div class="modal fade" id="PaulvanColler" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <svg xmlns="http://www.w3.org/2000/svg" class="wave" viewBox="0 0 1440 320">
+          <path fill="#3b4a5e" fill-opacity="0.9"
+            d="M0,160L40,138.7C80,117,160,75,240,80C320,85,400,139,480,149.3C560,160,640,128,720,101.3C800,75,880,53,960,64C1040,75,1120,117,1200,128C1280,139,1360,117,1400,106.7L1440,96L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z">
+          </path>
+        </svg>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row px-3 pb-3 align-items-center">
+          <div class="col-8">
+            <h3 class="person-name">Paul van Coller</h3>
+            <!-- <p class="person-title">Lorem Ipsum</p> -->
+          </div>
+          <div class="col-4">
+            <img src="assets/img/people/Paul.jpg">
+            <div class="socials">
+              <a href="https://www.linkedin.com/in/Paul van Coller/" class="social social" target="_blank">
+                <img src="./assets/img/in.svg" alt="">
+              </a>
+            </div>
+          </div>
+          <p class="col-12 pt-5">Experienced software engineer with a demonstrated history of working in the computer software industry. Skilled in .Net and .NET Core, Javascript/React, SQL Server, MySQL, PostgreSQL, Oracle Database, Java, PHP, C++ and VBScript/VB6. Strong business development professional with a Masters in Engineering from University of Witwatersrand, Johannesburg.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Reinhardt Wijaya -->
+<div class="modal fade" id="ReinhardtWijaya" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <svg xmlns="http://www.w3.org/2000/svg" class="wave" viewBox="0 0 1440 320">
+          <path fill="#3b4a5e" fill-opacity="0.9"
+            d="M0,160L40,138.7C80,117,160,75,240,80C320,85,400,139,480,149.3C560,160,640,128,720,101.3C800,75,880,53,960,64C1040,75,1120,117,1200,128C1280,139,1360,117,1400,106.7L1440,96L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z">
+          </path>
+        </svg>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row px-3 pb-3 align-items-center">
+          <div class="col-8">
+            <h3 class="person-name">Reinhardt Wijaya</h3>
+            <!-- <p class="person-title">Lorem Ipsum</p> -->
+          </div>
+          <div class="col-4">
+            <img src="assets/img/people/Reinhardt.jpg">
+            <div class="socials">
+              <a href="https://www.linkedin.com/in/Reinhardt--Wijaya/" class="social social" target="_blank">
+                <img src="./assets/img/in.svg" alt="">
+              </a>
+            </div>
+          </div>
+          <p class="col-12 pt-5">Business Analyst with experience in the Insurance and Government Health industries. Skilled in Business Analysis, Business Resilience, and decision model notation. Professional with a Bachelor of Commerce (Information Systems) and Bachelor of Media (Public Relations & Advertising) from the University of New South Wales.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Tanvi Rajpurkar -->
+<div class="modal fade" id="TanviRajpurkar" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <svg xmlns="http://www.w3.org/2000/svg" class="wave" viewBox="0 0 1440 320">
+          <path fill="#3b4a5e" fill-opacity="0.9"
+            d="M0,160L40,138.7C80,117,160,75,240,80C320,85,400,139,480,149.3C560,160,640,128,720,101.3C800,75,880,53,960,64C1040,75,1120,117,1200,128C1280,139,1360,117,1400,106.7L1440,96L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z">
+          </path>
+        </svg>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row px-3 pb-3 align-items-center">
+          <div class="col-8">
+            <h3 class="person-name">Tanvi Rajpurkar</h3>
+            <!-- <p class="person-title">Lorem Ipsum</p> -->
+          </div>
+          <div class="col-4">
+            <img src="assets/img/people/Tanvi.jpg">
+            <div class="socials">
+              <a href="https://www.linkedin.com/in/Tanvi--Rajpurkar/" class="social social" target="_blank">
+                <img src="./assets/img/in.svg" alt="">
+              </a>
+            </div>
+          </div>
+          <p class="col-12 pt-5">An accomplished and enthusiastic IT management professional, with 7 years of experience in Insurance, IT Healthcare, Digital Education and Banking and Finance Domain. Solid analytical skills, solution-driven approach and a strong focus to identify problems, opportunities and provide solutions to help businesses achieve their goals.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Allan Wang -->
+<div class="modal fade" id="AllanWang" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <svg xmlns="http://www.w3.org/2000/svg" class="wave" viewBox="0 0 1440 320">
+          <path fill="#3b4a5e" fill-opacity="0.9"
+            d="M0,160L40,138.7C80,117,160,75,240,80C320,85,400,139,480,149.3C560,160,640,128,720,101.3C800,75,880,53,960,64C1040,75,1120,117,1200,128C1280,139,1360,117,1400,106.7L1440,96L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z">
+          </path>
+        </svg>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row px-3 pb-3 align-items-center">
+          <div class="col-8">
+            <h3 class="person-name">Allan Wang</h3>
+            <!-- <p class="person-title">Lorem Ipsum</p> -->
+          </div>
+          <div class="col-4">
+            <img src="assets/img/people/Allan.jpg">
+            <div class="socials">
+              <a href="https://www.linkedin.com/in/Allan--Wang/" class="social social" target="_blank">
+                <img src="./assets/img/in.svg" alt="">
+              </a>
+            </div>
+          </div>
+          <p class="col-12 pt-5">Technical Business Analyst with comprehensive experience in the insurance industry. A professional with strong skills in Business Analysis, Data Analysis and Project Management. Solid educational and certifying foundation with LOMA, PMP and MCSE - Data Management and Analytics.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Marian Hutson -->
+<div class="modal fade" id="MarianHutson" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <svg xmlns="http://www.w3.org/2000/svg" class="wave" viewBox="0 0 1440 320">
+          <path fill="#3b4a5e" fill-opacity="0.9"
+            d="M0,160L40,138.7C80,117,160,75,240,80C320,85,400,139,480,149.3C560,160,640,128,720,101.3C800,75,880,53,960,64C1040,75,1120,117,1200,128C1280,139,1360,117,1400,106.7L1440,96L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z">
+          </path>
+        </svg>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row px-3 pb-3 align-items-center">
+          <div class="col-8">
+            <h3 class="person-name">Marian Hutson</h3>
+            <!-- <p class="person-title">Lorem Ipsum</p> -->
+          </div>
+          <div class="col-4">
+            <img src="assets/img/people/Marian.jpg">
+            <div class="socials">
+              <a href="https://www.linkedin.com/in/Marian--Hutson/" class="social social" target="_blank">
+                <img src="./assets/img/in.svg" alt="">
+              </a>
+            </div>
+          </div>
+          <p class="col-12 pt-5">Experienced professional with a demonstrated history of working in the primary and secondary education industry and law. Skilled in Legal Writing, Legal Research, Corporate Law and Civil Litigation, having studied a Bachelor of Arts, Bachelor of Laws, Master of Laws and a Higher Diploma in Education. Continued focus and interest in Law and Compliance in the Insurance space.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-  <script src="js/jquery-3.4.1.min.js"></script>
-  <script src="js/bootstrap.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
-  </script>
-  <script src="js/custom.js"></script>
-  <!-- Google Map -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>
-  <!-- End Google Map -->
-
+  <!-- LiamHuang -->
+  <div
+          class="modal fade"
+          id="LiamHuang"
+          tabindex="-1"
+          role="dialog"
+          aria-hidden="true"
+  >
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="wave"
+                  viewBox="0 0 1440 320"
+          >
+            <path
+                    fill="#3b4a5e"
+                    fill-opacity="0.9"
+                    d="M0,160L40,138.7C80,117,160,75,240,80C320,85,400,139,480,149.3C560,160,640,128,720,101.3C800,75,880,53,960,64C1040,75,1120,117,1200,128C1280,139,1360,117,1400,106.7L1440,96L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"
+            ></path>
+          </svg>
+          <button
+                  type="button"
+                  class="close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="row px-3 pb-3 align-items-center">
+            <div class="col-8">
+              <h3 class="person-name">Liam Huang</h3>
+              <!-- <p class="person-title">Lorem Ipsum</p> -->
+            </div>
+            <div class="col-4">
+              <img src="assets/img/people/liam.jpg" />
+              <div class="socials">
+                <a
+                        href="#"
+                        class="social social"
+                        target="_blank"
+                >
+                  <img src="./assets/img/in.svg" alt="" />
+                </a>
+              </div>
+            </div>
+            <p class="col-12 pt-5">
+              Developer skilled in PostgreSQL, MySQL, Java, Python and C++. Experienced in Database design, Business Analytics and Web Development currently finishing a double Bachelors degree in Computer Science / Commerce (Finance) from the University of New South Wales.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
 </body>
 

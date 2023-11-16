@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <base href="" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Choose your account</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --body-background-color: rgba(246, 248, 251, 1);
+        --body-background: linear-gradient(
+          180deg,
+          #e5f1f7,
+          -1.24%,
+          #96d2e5 100%
+        );
+        --main-container-background-color: #ffffff;
+        --box-shadow-first-color: rgba(159, 162, 191, 0.18);
+        --box-shadow-second-color: rgba(159, 162, 191, 0.32);
+        --error-color: #b00000;
+        --input-border-color: rgba(34, 51, 84, 0.5);
+        --button-color: #40adcf;
+        --button-hover-color: #2e95b5;
+        --button-text-color: #ffffff;
+        --header-color: rgba(64, 173, 207, 1);
+        --sub-header-color: #223354;
+      }
+      * {
+        box-sizing: border-box;
+        font-family: "Roboto", sans-serif;
+      }
+      /* body */
+      body {
+        background: var(--body-background);
+        position: relative;
+        min-width: 100vw;
+        min-height: 100vh;
+        overflow: hidden;
+      }
+      body:before,
+      body:after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        min-width: 300vw;
+        min-height: 300vw;
+        background-color: var(--body-background-color);
+        -webkit-animation-name: rotate;
+        animation-name: rotate;
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+        -webkit-animation-timing-function: linear;
+        animation-timing-function: linear;
+        -webkit-animation-duration: 30s;
+        animation-duration: 30s;
+      }
+      body:before {
+        bottom: 22vh;
+        border-radius: 45%;
+      }
+      body:after {
+        bottom: 17vh;
+        opacity: 0.6;
+        border-radius: 47%;
+      }
+      @-webkit-keyframes rotate {
+        0% {
+          transform: translate(-50%, 0) rotatez(0deg);
+        }
+        50% {
+          transform: translate(-50%, -2%) rotatez(180deg);
+        }
+        100% {
+          transform: translate(-50%, 0%) rotatez(360deg);
+        }
+      }
+      @keyframes rotate {
+        0% {
+          transform: translate(-50%, 0) rotatez(0deg);
+        }
+        50% {
+          transform: translate(-50%, -2%) rotatez(180deg);
+        }
+        100% {
+          transform: translate(-50%, 0%) rotatez(360deg);
+        }
+      }
+      /* main */
+      #main_container {
+        padding: 32px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background-color: var(--main-container-background-color);
+        border-radius: 6px;
+        box-shadow: 0px 9px 16px var(--box-shadow-first-color),
+          0px 2px 2px var(--box-shadow-second-color);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 450px;
+        z-index: 100;
+      }
+      #api .verificationInfoText,
+      .verificationSuccessText {
+        margin: 16px;
+        text-align: center;
+      }
+      #api .error {
+        color: var(--error-color);
+      }
+      #api .helpLink {
+        display: none;
+      }
+      #api ul {
+        padding: 0;
+        list-style-type: none;
+      }
+      #api ul li label {
+        display: none;
+      }
+      #api ul li + li .attrEntry {
+        margin-top: 24px;
+      }
+      #api input {
+        font-size: 14px;
+        line-height: 24px;
+        padding: 10px;
+        width: 100%;
+        border: 1px solid var(--input-border-color);
+        border-radius: 4px;
+      }
+      #api button {
+        width: 100%;
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 18px;
+        text-transform: uppercase;
+        padding: 12px;
+        border-radius: 6px;
+        border: none;
+        background-color: var(--button-color);
+        color: var(--button-text-color);
+        cursor: pointer;
+      }
+      #api button:hover {
+        background-color: var(--button-hover-color);
+      }
+      #api .heading {
+        margin-top: 1em;
+      }
+      #api .heading h1 {
+        display: none;
+      }
+      #api .heading::before {
+        content: "Recover Password";
+        color: var(--header-color);
+        font-size: 25px;
+        line-height: 29px;
+        font-weight: 700;
+      }
+      #api .intro {
+        margin-bottom: 8px;
+      }
+      #api .intro p {
+        display: none;
+      }
+      #api .intro::before {
+        content: "Enter the email used for registration to reset your password";
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 16px;
+        color: var(--sub-header-color);
+        opacity: 0.5;
+      }
+      #api #attributeVerification .buttons {
+        margin-top: 24px;
+      }
+      #api #attributeVerification .buttons button + button {
+        margin-top: 8px;
+      }
+      #api .verifying-modal {
+        margin-top: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main_container">
+      <img data-tenant-branding-logo="true" alt="Company Logo" />
+      <div id="api" role="main"></div>
+    </div>
+  </body>
+</html>

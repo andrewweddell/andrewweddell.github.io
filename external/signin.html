@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <base href="" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Choose your account</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --body-background-color: rgba(246, 248, 251, 1);
+        --body-background: linear-gradient(
+          180deg,
+          #e5f1f7,
+          -1.24%,
+          #96d2e5 100%
+        );
+        --main-container-background-color: #ffffff;
+        --box-shadow-first-color: rgba(159, 162, 191, 0.18);
+        --box-shadow-second-color: rgba(159, 162, 191, 0.32);
+        --button-color: #40adcf;
+        --button-hover-color: #2e95b5;
+        --button-text-color: #ffffff;
+        --header-color: rgba(64, 173, 207, 1);
+        --error-color: #b00000;
+        --input-border-color: rgba(34, 51, 84, 0.5);
+        --sign-up-background-color: rgba(117, 204, 239, 0.2);
+        --sign-up-border-color: rgba(117, 204, 239, 0.3);
+      }
+      * {
+        box-sizing: border-box;
+        font-family: "Roboto", sans-serif;
+      }
+      /* body */
+      body {
+        background: var(--body-background);
+        position: relative;
+        min-width: 100vw;
+        min-height: 100vh;
+        overflow: hidden;
+      }
+      body:before,
+      body:after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        min-width: 300vw;
+        min-height: 300vw;
+        background-color: var(--body-background-color);
+        -webkit-animation-name: rotate;
+        animation-name: rotate;
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+        -webkit-animation-timing-function: linear;
+        animation-timing-function: linear;
+        -webkit-animation-duration: 30s;
+        animation-duration: 30s;
+      }
+      body:before {
+        bottom: 22vh;
+        border-radius: 45%;
+      }
+      body:after {
+        bottom: 17vh;
+        opacity: 0.6;
+        border-radius: 47%;
+      }
+      @-webkit-keyframes rotate {
+        0% {
+          transform: translate(-50%, 0) rotatez(0deg);
+        }
+        50% {
+          transform: translate(-50%, -2%) rotatez(180deg);
+        }
+        100% {
+          transform: translate(-50%, 0%) rotatez(360deg);
+        }
+      }
+      @keyframes rotate {
+        0% {
+          transform: translate(-50%, 0) rotatez(0deg);
+        }
+        50% {
+          transform: translate(-50%, -2%) rotatez(180deg);
+        }
+        100% {
+          transform: translate(-50%, 0%) rotatez(360deg);
+        }
+      }
+      input::-ms-reveal,
+      input::-ms-clear {
+        display: none;
+      }
+      /* main */
+      #main_container {
+        padding: 32px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background-color: var(--main-container-background-color);
+        border-radius: 6px;
+        box-shadow: 0px 9px 16px var(--box-shadow-first-color),
+          0px 2px 2px var(--box-shadow-second-color);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        z-index: 100;
+      }
+      #api button {
+        width: 100%;
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 18px;
+        text-transform: uppercase;
+        padding: 12px;
+        border-radius: 6px;
+        border: none;
+        background-color: var(--button-color);
+        color: var(--button-text-color);
+        cursor: pointer;
+      }
+      #api button:hover {
+        background-color: var(--button-hover-color);
+      }
+      #api a {
+        color: var(--header-color);
+        text-decoration: none;
+        cursor: pointer;
+      }
+      #api .heading h1 {
+        color: var(--header-color);
+        margin: 0.5em 0;
+        font-size: 25px;
+      }
+      #api .intro {
+        display: none;
+      }
+      #api .entry-item {
+        position: relative;
+      }
+      #api .entry-item + .entry-item {
+        margin-top: 16px;
+      }
+      #api .entry-item:nth-child(2) {
+        padding-bottom: 24px;
+      }
+      #api .entry-item .error p {
+        margin: 0;
+        color: var(--error-color);
+      }
+      #api .entry-item label {
+        display: none;
+      }
+      #api .entry-item input {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 24px;
+        padding: 10px;
+        min-width: 380px;
+        border: 1px solid var(--input-border-color);
+        border-radius: 4px;
+      }
+      #api .entry-item input#password {
+        padding-right: 30px;
+      }
+      #api .entry-item .password-label {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        text-align: end;
+        font-size: 14px;
+      }
+      #api .entry-item .password-label #forgotPassword {
+        font-weight: 400;
+        font-style: normal;
+        letter-spacing: 0.09px;
+      }
+      #api .entry-item #show-password {
+        position: absolute;
+        right: 5px;
+        top: 15px;
+        width: 22px;
+        height: 15px;
+        cursor: pointer;
+        background-size: contain;
+        background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAeCAYAAAC49JeZAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAS6SURBVHgB1Vi/b9tGFH53dFsOTqRGbs2iGdjWqI2kg5q4hUaOHjoIrQJ46OA/q6OHDAWatJoKDxk4akgDDoGtIUE4FA2Hxr6gGZRIvNf3qB8geTxZUjQkD7AM8t7d+/jeu/e9O4D3UAS8hfh+4EK97oH8yAMx8iQKH1C4INDNqSkBWgHiIBUfxqBfJ3HUjeEtZCXQfrPtg+M0pZZ7JYCLihIC4zRNQ/oABUvKUqAZrCNlgCB9WJNQFOJU63AZ7y8E2v/ujuek6cE6wRpABEaLev5S0P6tH1sS5IFVgXJVI/QBZAwfQALD4SBvmKJTp391kNIDlL4E9AmhLaWU1oKA/xbBKqB5kzmNxgGiaFaNa0z7BLi3yqbyb/+0B6lsSUkfUCFSQvjk4b0QlgHNgOXHjSPyiAcGWPIqjk7KYeQ5G1tbLdTaR3S8bIOiGAiRJql2yHPD2JhDUZDCOayyw+ny9K/73YVA2wFrCp3uVnl2Z78TaA0BzBelQffiR7/3DJucgiiCctrYgDvlF40v9juk7RdeYppoxLsEOCkYow9sfHnrZ1sKlcQVIHaufXbTvXh++iQ/oJ6f/V3zdh8LAXsENQdceI3Pb8D5P6exFbRPHiPX70MZ8MXFcdw/eVVG0fjq9g9UUfZgObleBUQl/UFte7dfBo4Ifm37a0XjiQE6yy+Qh5WA43BQtuw37zTJQFB8SykEGOL5i3vPzv58QMYiRJ2QnlcBJCYgahHgFCGfI8Hj/CynA1JuHBkAEH+tAjzWx8DQPz//hXN2Ooc3Hv1FtBeOeTyvzSRVtS7PyfSplM5eUq6Tfntmm3/Ya8C1NA9hvOkqC31G46b+se0DJ0AKG4qJKutdbPoCQ0N/bHcMuuw1rTGaW3+ZKEz9uUyWrYeysJHhSsO36lPENIg4/24aHWl6mcOYhjBXnIKXQWICCwgRUlHPkfObLT0M849Tb9PeS4sTubVUagDvhlRGT8LVq5GR9Nc+CWCupMXFtMlolcaEU9Ibqkv0C9VMaM2sGss4PB6YSY+tadJXitZJcXHYmzRGVsn6DaGLoKn6WvWJJcusnIIOM3v8M6bWYkmiEti2ARlv0pw+RYe9YtPPOABFoVPkhstWbcb6TlDQzxWHGblQUScSkHk6drOi7m4/VioelRcmfWqGcmwoxCY/17ZvDurup4rnsPGt69+0AJ02McRmfj6Rzt0pWRiAmTMK+lqRfneqL4oTOgG1hQEUVydWfFHNit92DmXGXsuJ1NR6RmbrOQNscMCIOWPWY8v8YEwLlWsj5xV3fZWhr212+aNgCRGQ9pYBzB+YB8xidHn13e/7YvB6h8OdAz4LvUpOZyCJo0cXydnD2vYNUgEf5gmfcAQ+ePboj9AAnJ2ONjrlFBKUx0+j+ydl/epDQHDkypf/Hdma86qzXBYJKVqgNzzJVYJ74+woxpGgo5j6t1dOsXkH5QngxQ4BeeDw8lXblrMT8NFKx61LTvW2nJ/ZhksNVGzOokzuMMibY7JQxsH2zRsX3Ct+dqEz764ki0x6Us7hpUFPDdvOcusS6gJj+u2u5QohLwS+KbNOS9ZhTTIBu/7LmrKMKZ6uxTjf7XcYdskqiY6IFvur7In/AddbrwPjw2ynAAAAAElFTkSuQmCC");
+      }
+      #api form .buttons {
+        margin-top: 32px;
+      }
+      #api .divider {
+        display: none;
+      }
+      #api .create {
+        margin-top: 32px;
+      }
+      #api .create p {
+        margin: 0;
+        padding: 12px;
+        border-radius: 6px;
+        background: var(--sign-up-background-color);
+        border: 1px solid var(--sign-up-border-color);
+        text-align: center;
+        font-size: 14px;
+        font-weight: 400;
+      }
+      #api .create p a {
+        margin-left: 8px;
+      }
+    </style>
+    <script defer>
+      const password = document.getElementById("password");
+      if (password) {
+        const parent = password.parentNode;
+        const eye = document.createElement("div");
+        eye.setAttribute("id", "show-password");
+        eye.addEventListener("click", () => {
+          if (password.getAttribute("type") === "text") {
+            password.setAttribute("type", "password");
+          } else {
+            password.setAttribute("type", "text");
+          }
+        });
+        parent.appendChild(eye);
+      }
+
+      const email = document.getElementById("email");
+      const forgotPassword = document.getElementById("forgotPassword");
+      const next = document.getElementById("next");
+      if (email && password && forgotPassword && next) {
+        email.setAttribute("tabIndex", 1);
+        email.setAttribute("password", 2);
+        email.setAttribute("forgotPassword", 3);
+        email.setAttribute("next", 4);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="main_container">
+      <img data-tenant-branding-logo="true" alt="Company Logo" />
+      <div id="api"></div>
+    </div>
+  </body>
+</html>
