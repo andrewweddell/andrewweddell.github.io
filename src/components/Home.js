@@ -121,14 +121,26 @@ const Home = () => {
           )}
         </div>
       </section>
+      <section>
+        <h2>Your Settings Summary</h2>
+        <div className="settings-summary">
+          <p>Your Cold Threshold: {coldThreshold}°C</p>
+          <p>Your Warm Threshold: {warmThreshold}°C</p>
+          {weatherData && weatherData.main.temp < coldThreshold && (
+            <p>Current temperature is below your cold threshold.</p>
+          )}
+          {weatherData && weatherData.main.temp > warmThreshold && (
+            <p>Current temperature is above your warm threshold.</p>
+          )}
+        </div>
+      </section>
 
       <Modal
         isOpen={isSettingsOpen}
         onRequestClose={() => setIsSettingsOpen(false)}
         contentLabel="Settings Modal"
       >
-        <Settings />
-        <button onClick={() => setIsSettingsOpen(false)}>Close Settings</button>
+        <Settings closeModal={() => setIsSettingsOpen(false)} />
       </Modal>
     </div>
   );
