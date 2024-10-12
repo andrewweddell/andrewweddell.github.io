@@ -4,7 +4,7 @@ import Modal from 'react-modal';
 import { ThresholdContext } from '../context/ThresholdContext';
 import Settings from './Settings';
 import styles from './Home.module.scss';
- 
+import logo from '../images/logo.png';
 
 Modal.setAppElement('#root'); // To prevent accessibility-related warnings
 
@@ -15,6 +15,7 @@ const Home = () => {
   const [clothingRecommendation, setClothingRecommendation] = useState('');
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
   const { coldThreshold, warmThreshold } = useContext(ThresholdContext);
+  const [displayedLocation, setDisplayedLocation] = useState('');
 
   const API_KEY = 'a5705087624892d6a318bbd822abe8ec';
 
@@ -125,8 +126,19 @@ const Home = () => {
       .then((response) => {
         if (response.data.length > 0) {
           const { lat, lon, name, country } = response.data[0];
-          fetchWeatherData(lat, lon);
-          setLocation(`${name}, ${country}`);
+          axios
+            .get(
+              `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${API_KEY}`
+            )
+            .then((weatherResponse) => {
+              setWeatherData(weatherResponse.data);
+              generateClothingRecommendation(weatherResponse.data);
+              setLocation(`${name}, ${country}`);
+              setDisplayedLocation(`${name}, ${country}`);
+            })
+            .catch((error) => {
+              setError('Failed to fetch weather data');
+            });
         } else {
           setError('Location not found. Please try another city name.');
         }
@@ -139,7 +151,10 @@ const Home = () => {
   return (
     <div className={styles.homeContainer}>
       <header className={styles.header}>
-        <h1>🚴‍♂️ Cycling Weather</h1>
+        <div className={styles.titleContainer}>
+          <img src={logo} alt="Weather App Logo" className={styles.logo} />
+          <h1>Cycling Weather</h1>
+        </div>
       </header>
       <button className={styles.settingsButton} onClick={() => setIsSettingsOpen(true)}>⚙️ Settings</button>
       <section className={styles.section}>
@@ -162,7 +177,7 @@ const Home = () => {
         <div className={styles.weatherDetails}>
           {weatherData ? (
             <>
-              <h3 className={styles.locationName}>{location}</h3>
+              <h3 className={styles.locationName}>{displayedLocation}</h3>
               <div className={styles.weatherIcon}>
                 {getWeatherIcon(weatherData.weather[0].main)}
               </div>

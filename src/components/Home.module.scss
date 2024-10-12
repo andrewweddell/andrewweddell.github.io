@@ -20,11 +20,23 @@
 .header {
   text-align: center;
   margin-bottom: 20px;
+}
 
-  h1 {
-    font-size: 2.5rem;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-  }
+.titleContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  width: 30px; // Adjust this value to make the logo smaller or larger
+  height: auto;
+  margin-right: 10px;
+}
+
+h1 {
+  font-size: 2rem; // Adjust this value as needed
+  margin: 0; // Remove default margin
 }
 
 .settingsButton {
@@ -138,10 +150,6 @@
   margin-bottom: 10px;
 }
 
-h1 {
-  font-size: 2rem;
-}
-
 h2 {
   font-size: 1.5rem;
 }
@@ -187,4 +195,20 @@ p {
   font-weight: bold;
   margin-bottom: 10px;
   text-align: center;
+}
+
+.logo {
+  width: 50px; // Adjust as needed
+  height: auto;
+  margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+  .logo {
+    width: 24px; // Even smaller on mobile devices
+  }
+
+  h1 {
+    font-size: 1.5rem; // Smaller font size on mobile devices
+  }
 }
