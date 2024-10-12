@@ -1,5 +1,4 @@
-import React, { createContext, useState, useEffect, useCallback } from 'react';
-
+import React, { createContext, useState, useCallback } from 'react';
 export const ThresholdContext = createContext();
 
 export const ThresholdProvider = ({ children }) => {

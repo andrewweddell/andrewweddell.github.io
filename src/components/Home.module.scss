@@ -1,0 +1,149 @@
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.homeContainer {
+  font-family: 'Roboto', sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+
+  h1 {
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  }
+}
+
+.settingsButton {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  margin-bottom: 20px;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
+  }
+}
+
+.section {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  h2 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+  }
+}
+
+.locationInput {
+  width: calc(100% - 20px);
+  padding: 10px;
+  border: none;
+  border-radius: 25px;
+  margin-bottom: 10px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+  }
+}
+
+.locationButton {
+  width: 100%;
+  background-color: #23a6d5;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: #1c8ab1;
+    transform: scale(1.05);
+  }
+}
+
+.weatherDetails {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+
+  p {
+    font-size: 1rem;
+    margin: 5px 0;
+  }
+}
+
+.clothingRecommendations {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.weatherIcon {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.cyclingCondition {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 10px;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .header h1 {
+    font-size: 3rem;
+  }
+
+  .section h2 {
+    font-size: 1.5rem;
+  }
+
+  .weatherDetails {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .locationInput {
+    width: 70%;
+    margin-right: 10px;
+    margin-bottom: 0;
+  }
+
+  .locationButton {
+    width: auto;
+  }
+}

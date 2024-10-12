@@ -1,0 +1,92 @@
+.settingsContainer {
+  font-family: 'Roboto', sans-serif;
+  padding: 30px;
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  color: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.settingsHeader {
+  text-align: center;
+  margin-bottom: 30px;
+
+  h1 {
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  }
+}
+
+.thresholdsSection {
+  margin-bottom: 30px;
+
+  h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+}
+
+.thresholdControl {
+  margin-bottom: 20px;
+
+  label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+  }
+
+  input[type="range"] {
+    width: 100%;
+    -webkit-appearance: none;
+    background: transparent;
+    margin: 10px 0;
+
+    &:focus {
+      outline: none;
+    }
+
+    &::-webkit-slider-runnable-track {
+      width: 100%;
+      height: 8px;
+      cursor: pointer;
+      background: rgba(255, 255, 255, 0.3);
+      border-radius: 4px;
+    }
+
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      height: 24px;
+      width: 24px;
+      border-radius: 50%;
+      background: #23a6d5;
+      cursor: pointer;
+      margin-top: -8px;
+      box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  span {
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+}
+
+.saveButton {
+  background-color: #23a6d5;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1.2rem;
+  display: block;
+  margin: 0 auto;
+
+  &:hover {
+    background-color: #1c8ab1;
+    transform: scale(1.05);
+  }
+}

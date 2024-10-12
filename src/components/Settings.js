@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { ThresholdContext } from '../context/ThresholdContext';
 
-import './Settings.css';
+import styles from './Settings.module.css';
 
 const Settings = ({ closeModal }) => {
   const { coldThreshold, warmThreshold, setColdThreshold, setWarmThreshold } = useContext(ThresholdContext);
@@ -11,11 +11,11 @@ const Settings = ({ closeModal }) => {
   };
 
   return (
-    <div>
-      <header>
+    <div className={styles.settingsContainer}>
+      <header className={styles.settingsHeader}>
         <h1>Settings ⚙️</h1>
       </header>
-      <section>
+      <section className={styles.thresholdsSection}>
         <h2>Personal Comfort Thresholds</h2>
         <label>
           Cold Weather Threshold: 
@@ -41,7 +41,7 @@ const Settings = ({ closeModal }) => {
           <span>{warmThreshold}°C</span>
         </label>
       </section>
-      <button onClick={handleSave}>Save and Close</button>
+      <button className={styles.saveButton} onClick={handleSave}>Save and Close</button>
     </div>
   );
 };
