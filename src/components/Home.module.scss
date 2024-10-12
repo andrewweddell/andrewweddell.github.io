@@ -66,12 +66,17 @@
   }
 }
 
+.searchContainer {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
 .locationInput {
-  width: calc(100% - 20px);
+  flex-grow: 1;
   padding: 10px;
   border: none;
   border-radius: 25px;
-  margin-bottom: 10px;
   background-color: rgba(255, 255, 255, 0.2);
   color: white;
 
@@ -80,8 +85,8 @@
   }
 }
 
+.searchButton,
 .locationButton {
-  width: 100%;
   background-color: #23a6d5;
   color: white;
   border: none;
@@ -94,6 +99,10 @@
     background-color: #1c8ab1;
     transform: scale(1.05);
   }
+}
+
+.locationButton {
+  width: 100%;
 }
 
 .weatherDetails {
@@ -124,6 +133,23 @@
   text-align: center;
 }
 
+.clothingIcon {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+p {
+  font-size: 1rem;
+}
+
 @media (min-width: 768px) {
   .header h1 {
     font-size: 3rem;
@@ -146,4 +172,19 @@
   .locationButton {
     width: auto;
   }
+
+  p {
+    font-size: 1.1rem;
+  }
+
+  .clothingIcon {
+    font-size: 3rem;
+  }
+}
+
+.locationName {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
 }

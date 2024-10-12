@@ -117,6 +117,25 @@ const Home = () => {
     return 'Good conditions for cycling!';
   };
 
+  const fetchWeatherDataByCity = (cityName) => {
+    axios
+      .get(
+        `https://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=1&appid=${API_KEY}`
+      )
+      .then((response) => {
+        if (response.data.length > 0) {
+          const { lat, lon, name, country } = response.data[0];
+          fetchWeatherData(lat, lon);
+          setLocation(`${name}, ${country}`);
+        } else {
+          setError('Location not found. Please try another city name.');
+        }
+      })
+      .catch((error) => {
+        setError('Failed to fetch location data');
+      });
+  };
+
   return (
     <div className={styles.homeContainer}>
       <header className={styles.header}>
@@ -125,13 +144,17 @@ const Home = () => {
       <button className={styles.settingsButton} onClick={() => setIsSettingsOpen(true)}>⚙️ Settings</button>
       <section className={styles.section}>
         <h2>Enter Your Location</h2>
-        <input
-          className={styles.locationInput}
-          type="text"
-          placeholder="Enter location..."
-          value={location}
-          onChange={(e) => setLocation(e.target.value)}
-        />
+        <div className={styles.searchContainer}>
+          <input
+            className={styles.locationInput}
+            type="text"
+            placeholder="Enter city name..."
+            value={location}
+            onChange={(e) => setLocation(e.target.value)}
+            onKeyPress={(e) => e.key === 'Enter' && fetchWeatherDataByCity(location)}
+          />
+          <button className={styles.searchButton} onClick={() => fetchWeatherDataByCity(location)}>🔍 Search</button>
+        </div>
         <button className={styles.locationButton} onClick={getCurrentLocation}>📍 Use Current Location</button>
       </section>
       <section className={styles.section}>
@@ -139,6 +162,7 @@ const Home = () => {
         <div className={styles.weatherDetails}>
           {weatherData ? (
             <>
+              <h3 className={styles.locationName}>{location}</h3>
               <div className={styles.weatherIcon}>
                 {getWeatherIcon(weatherData.weather[0].main)}
               </div>

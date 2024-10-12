@@ -17,9 +17,10 @@ const Settings = ({ closeModal }) => {
       </header>
       <section className={styles.thresholdsSection}>
         <h2>Personal Comfort Thresholds</h2>
-        <label>
-          Cold Weather Threshold: 
+        <div className={styles.thresholdControl}>
+          <label htmlFor="coldThreshold">Cold Weather Threshold:</label>
           <input
+            id="coldThreshold"
             type="range"
             min="0"
             max="20"
@@ -27,11 +28,11 @@ const Settings = ({ closeModal }) => {
             onChange={(e) => setColdThreshold(Number(e.target.value))}
           />
           <span>{coldThreshold}°C</span>
-        </label>
-        <br />
-        <label>
-          Warm Weather Threshold: 
+        </div>
+        <div className={styles.thresholdControl}>
+          <label htmlFor="warmThreshold">Warm Weather Threshold:</label>
           <input
+            id="warmThreshold"
             type="range"
             min="20"
             max="40"
@@ -39,7 +40,7 @@ const Settings = ({ closeModal }) => {
             onChange={(e) => setWarmThreshold(Number(e.target.value))}
           />
           <span>{warmThreshold}°C</span>
-        </label>
+        </div>
       </section>
       <button className={styles.saveButton} onClick={handleSave}>Save and Close</button>
     </div>
