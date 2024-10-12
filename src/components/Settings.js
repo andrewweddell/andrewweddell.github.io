@@ -1,8 +1,14 @@
 import React, { useContext } from 'react';
 import { ThresholdContext } from '../context/ThresholdContext';
 
-const Settings = () => {
+import './Settings.css';
+
+const Settings = ({ closeModal }) => {
   const { coldThreshold, warmThreshold, setColdThreshold, setWarmThreshold } = useContext(ThresholdContext);
+
+  const handleSave = () => {
+    closeModal(); // Close the modal and save the current settings
+  };
 
   return (
     <div>
@@ -20,7 +26,7 @@ const Settings = () => {
             value={coldThreshold}
             onChange={(e) => setColdThreshold(Number(e.target.value))}
           />
-          {coldThreshold}°C
+          <span>{coldThreshold}°C</span>
         </label>
         <br />
         <label>
@@ -32,13 +38,10 @@ const Settings = () => {
             value={warmThreshold}
             onChange={(e) => setWarmThreshold(Number(e.target.value))}
           />
-          {warmThreshold}°C
+          <span>{warmThreshold}°C</span>
         </label>
       </section>
-      <section>
-        <h2>Saved Locations</h2>
-        <p>No saved locations yet.</p>
-      </section>
+      <button onClick={handleSave}>Save and Close</button>
     </div>
   );
 };

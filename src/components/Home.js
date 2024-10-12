@@ -4,6 +4,8 @@ import Modal from 'react-modal';
 import { ThresholdContext } from '../context/ThresholdContext';
 import Settings from './Settings';
 
+import './Home.css';
+
 Modal.setAppElement('#root'); // To prevent accessibility-related warnings
 
 const Home = () => {

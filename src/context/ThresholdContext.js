@@ -1,25 +1,37 @@
-import React, { createContext, useState, useEffect } from 'react';
+import React, { createContext, useState, useEffect, useCallback } from 'react';
 
 export const ThresholdContext = createContext();
 
 export const ThresholdProvider = ({ children }) => {
-  const [coldThreshold, setColdThreshold] = useState(10);
-  const [warmThreshold, setWarmThreshold] = useState(20);
+  const [coldThreshold, setColdThreshold] = useState(() => {
+    const savedCold = localStorage.getItem('coldThreshold');
+    return savedCold !== null ? Number(savedCold) : 10; // Default to 10°C if no saved value
+  });
 
-  useEffect(() => {
-    const savedColdThreshold = localStorage.getItem('coldThreshold');
-    const savedWarmThreshold = localStorage.getItem('warmThreshold');
-    if (savedColdThreshold) setColdThreshold(Number(savedColdThreshold));
-    if (savedWarmThreshold) setWarmThreshold(Number(savedWarmThreshold));
+  const [warmThreshold, setWarmThreshold] = useState(() => {
+    const savedWarm = localStorage.getItem('warmThreshold');
+    return savedWarm !== null ? Number(savedWarm) : 20; // Default to 20°C if no saved value
+  });
+
+  const saveColdThreshold = useCallback((value) => {
+    setColdThreshold(value);
+    localStorage.setItem('coldThreshold', value);
   }, []);
 
-  useEffect(() => {
-    localStorage.setItem('coldThreshold', coldThreshold);
-    localStorage.setItem('warmThreshold', warmThreshold);
-  }, [coldThreshold, warmThreshold]);
+  const saveWarmThreshold = useCallback((value) => {
+    setWarmThreshold(value);
+    localStorage.setItem('warmThreshold', value);
+  }, []);
 
   return (
-    <ThresholdContext.Provider value={{ coldThreshold, warmThreshold, setColdThreshold, setWarmThreshold }}>
+    <ThresholdContext.Provider
+      value={{
+        coldThreshold,
+        warmThreshold,
+        setColdThreshold: saveColdThreshold,
+        setWarmThreshold: saveWarmThreshold,
+      }}
+    >
       {children}
     </ThresholdContext.Provider>
   );
