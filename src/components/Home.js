@@ -153,7 +153,7 @@ const Home = () => {
       <header className={styles.header}>
         <div className={styles.titleContainer}>
           <img src={logo} alt="Weather App Logo" className={styles.logo} />
-          <h1>What to wear? Mmmmmmm</h1>
+          <h1> Cycling Weather </h1>
         </div>
       </header>
       <button className={styles.settingsButton} onClick={() => setIsSettingsOpen(true)}>⚙️ Settings</button>
