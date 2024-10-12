@@ -1,12 +1,17 @@
 import React, { useState, useEffect, useCallback, useContext } from 'react';
 import axios from 'axios';
+import Modal from 'react-modal';
 import { ThresholdContext } from '../context/ThresholdContext';
+import Settings from './Settings';
+
+Modal.setAppElement('#root'); // To prevent accessibility-related warnings
 
 const Home = () => {
   const [weatherData, setWeatherData] = useState(null);
   const [location, setLocation] = useState('');
   const [error, setError] = useState('');
   const [clothingRecommendation, setClothingRecommendation] = useState('');
+  const [isSettingsOpen, setIsSettingsOpen] = useState(false);
   const { coldThreshold, warmThreshold } = useContext(ThresholdContext);
 
   const API_KEY = 'a5705087624892d6a318bbd822abe8ec';
@@ -80,6 +85,7 @@ const Home = () => {
       <header>
         <h1>🚴‍♂️ Cycling Weather</h1>
       </header>
+      <button onClick={() => setIsSettingsOpen(true)}>⚙️ Settings</button>
       <section>
         <h2>Enter Your Location</h2>
         <input
@@ -115,6 +121,15 @@ const Home = () => {
           )}
         </div>
       </section>
+
+      <Modal
+        isOpen={isSettingsOpen}
+        onRequestClose={() => setIsSettingsOpen(false)}
+        contentLabel="Settings Modal"
+      >
+        <Settings />
+        <button onClick={() => setIsSettingsOpen(false)}>Close Settings</button>
+      </Modal>
     </div>
   );
 };
