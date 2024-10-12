@@ -45,14 +45,16 @@ const Home = () => {
   const generateClothingRecommendation = (data) => {
     const temp = data.main.temp;
 
+    // Retrieve user preferences from local storage
+    const coldThreshold = localStorage.getItem('coldThreshold') ? Number(localStorage.getItem('coldThreshold')) : 10;
+    const warmThreshold = localStorage.getItem('warmThreshold') ? Number(localStorage.getItem('warmThreshold')) : 20;
+
     let recommendation = '';
 
-    if (temp >= 21) {
+    if (temp >= warmThreshold) {
       recommendation = 'Shorts and short-sleeve jersey.';
-    } else if (temp >= 15.5) {
+    } else if (temp >= coldThreshold) {
       recommendation = 'Shorts and long-sleeve jersey or thin undershirt.';
-    } else if (temp >= 10) {
-      recommendation = 'Tights or leg warmers; long-sleeve undershirt, sleeveless or short-sleeve jersey.';
     } else if (temp >= 7) {
       recommendation = 'Tights or leg warmers, long-sleeve undershirt, jacket, full-finger gloves, headband, wool socks, shoe covers.';
     } else if (temp >= 4.4) {
