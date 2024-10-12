@@ -1,11 +1,13 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useContext } from 'react';
 import axios from 'axios';
+import { ThresholdContext } from '../context/ThresholdContext';
 
 const Home = () => {
   const [weatherData, setWeatherData] = useState(null);
   const [location, setLocation] = useState('');
   const [error, setError] = useState('');
   const [clothingRecommendation, setClothingRecommendation] = useState('');
+  const { coldThreshold, warmThreshold } = useContext(ThresholdContext);
 
   const API_KEY = 'a5705087624892d6a318bbd822abe8ec';
 
@@ -44,10 +46,6 @@ const Home = () => {
   // Function to generate clothing recommendation based on weather
   const generateClothingRecommendation = (data) => {
     const temp = data.main.temp;
-
-    // Retrieve user preferences from local storage
-    const coldThreshold = localStorage.getItem('coldThreshold') ? Number(localStorage.getItem('coldThreshold')) : 10;
-    const warmThreshold = localStorage.getItem('warmThreshold') ? Number(localStorage.getItem('warmThreshold')) : 20;
 
     let recommendation = '';
 

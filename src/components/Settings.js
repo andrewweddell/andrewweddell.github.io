@@ -1,22 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useContext } from 'react';
+import { ThresholdContext } from '../context/ThresholdContext';
 
 const Settings = () => {
-  const [coldThreshold, setColdThreshold] = useState(10);
-  const [warmThreshold, setWarmThreshold] = useState(20);
-
-  // Load thresholds from local storage when the component mounts
-  useEffect(() => {
-    const savedColdThreshold = localStorage.getItem('coldThreshold');
-    const savedWarmThreshold = localStorage.getItem('warmThreshold');
-    if (savedColdThreshold) setColdThreshold(Number(savedColdThreshold));
-    if (savedWarmThreshold) setWarmThreshold(Number(savedWarmThreshold));
-  }, []);
-
-  // Save thresholds to local storage when they change
-  useEffect(() => {
-    localStorage.setItem('coldThreshold', coldThreshold);
-    localStorage.setItem('warmThreshold', warmThreshold);
-  }, [coldThreshold, warmThreshold]);
+  const { coldThreshold, warmThreshold, setColdThreshold, setWarmThreshold } = useContext(ThresholdContext);
 
   return (
     <div>
