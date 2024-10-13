@@ -149,86 +149,88 @@ const Home = () => {
   };
 
   return (
-    <div className={styles.homeContainer}>
-      <header className={styles.header}>
-        <div className={styles.titleContainer}>
-          <img src={logo} alt="Weather App Logo" className={styles.logo} />
-          <h1> Cycling Weather </h1>
-        </div>
-      </header>
-      <button className={styles.settingsButton} onClick={() => setIsSettingsOpen(true)}>⚙️ Settings</button>
-      <section className={styles.section}>
-        <h2>Enter Your Location</h2>
-        <div className={styles.searchContainer}>
-          <input
-            className={styles.locationInput}
-            type="text"
-            placeholder="Enter city name..."
-            value={location}
-            onChange={(e) => setLocation(e.target.value)}
-            onKeyPress={(e) => e.key === 'Enter' && fetchWeatherDataByCity(location)}
-          />
-          <button className={styles.searchButton} onClick={() => fetchWeatherDataByCity(location)}>🔍 Search</button>
-        </div>
-        <button className={styles.locationButton} onClick={getCurrentLocation}>📍 Use Current Location</button>
-      </section>
-      <section className={styles.section}>
-        <h2>Weather Summary</h2>
-        <div className={styles.weatherDetails}>
-          {weatherData ? (
-            <>
-              <h3 className={styles.locationName}>{displayedLocation}</h3>
-              <div className={styles.weatherIcon}>
-                {getWeatherIcon(weatherData.weather[0].main)}
-              </div>
-              <p>Temperature: {weatherData.main.temp}°C</p>
-              <p>Feels Like: {weatherData.main.feels_like}°C</p>
-              <p>Wind Speed: {weatherData.wind.speed} km/h</p>
-              <p>Humidity: {weatherData.main.humidity}%</p>
-              <div className={styles.cyclingCondition}>
-                {getCyclingCondition(weatherData)}
-              </div>
-            </>
-          ) : (
-            <p>{error || 'Weather data will appear here...'}</p>
-          )}
-        </div>
-      </section>
-      <section className={styles.section}>
-        <h2>Clothing Recommendations</h2>
-        <div className={styles.clothingRecommendations}>
-          {clothingRecommendation ? (
-            <>
-              <div className={styles.clothingIcon}>{clothingRecommendation.icon}</div>
-              <p>{clothingRecommendation.text}</p>
-            </>
-          ) : (
-            <p>Enter a location to see recommendations.</p>
-          )}
-        </div>
-      </section>
-      <section className={styles.section}>
-        <h2>Your Settings Summary</h2>
-        <div className={styles.settingsSummary}>
-          <p>Your Cold Threshold: {coldThreshold}°C</p>
-          <p>Your Warm Threshold: {warmThreshold}°C</p>
-          {weatherData && weatherData.main.temp < coldThreshold && (
-            <p>Current temperature is below your cold threshold.</p>
-          )}
-          {weatherData && weatherData.main.temp > warmThreshold && (
-            <p>Current temperature is above your warm threshold.</p>
-          )}
-        </div>
-      </section>
-      <Modal
-        isOpen={isSettingsOpen}
-        onRequestClose={() => setIsSettingsOpen(false)}
-        contentLabel="Settings Modal"
-        className={styles.modal}
-        overlayClassName={styles.overlay}
-      >
-        <Settings closeModal={() => setIsSettingsOpen(false)} />
-      </Modal>
+    <div className={styles.pageWrapper}>
+      <div className={styles.homeContainer}>
+        <header className={styles.header}>
+          <div className={styles.titleContainer}>
+            <img src={logo} alt="Weather App Logo" className={styles.logo} />
+            <h1> Cycling Weather </h1>
+          </div>
+        </header>
+        <button className={styles.settingsButton} onClick={() => setIsSettingsOpen(true)}>⚙️ Settings</button>
+        <section className={styles.section}>
+          <h2>Enter Your Location</h2>
+          <div className={styles.searchContainer}>
+            <input
+              className={styles.locationInput}
+              type="text"
+              placeholder="Enter city name..."
+              value={location}
+              onChange={(e) => setLocation(e.target.value)}
+              onKeyPress={(e) => e.key === 'Enter' && fetchWeatherDataByCity(location)}
+            />
+            <button className={styles.searchButton} onClick={() => fetchWeatherDataByCity(location)}>🔍 Search</button>
+          </div>
+          <button className={styles.locationButton} onClick={getCurrentLocation}>📍 Use Current Location</button>
+        </section>
+        <section className={styles.section}>
+          <h2>Weather Summary</h2>
+          <div className={styles.weatherDetails}>
+            {weatherData ? (
+              <>
+                <h3 className={styles.locationName}>{displayedLocation}</h3>
+                <div className={styles.weatherIcon}>
+                  {getWeatherIcon(weatherData.weather[0].main)}
+                </div>
+                <p>Temperature: {weatherData.main.temp}°C</p>
+                <p>Feels Like: {weatherData.main.feels_like}°C</p>
+                <p>Wind Speed: {weatherData.wind.speed} km/h</p>
+                <p>Humidity: {weatherData.main.humidity}%</p>
+                <div className={styles.cyclingCondition}>
+                  {getCyclingCondition(weatherData)}
+                </div>
+              </>
+            ) : (
+              <p>{error || 'Weather data will appear here...'}</p>
+            )}
+          </div>
+        </section>
+        <section className={styles.section}>
+          <h2>Clothing Recommendations</h2>
+          <div className={styles.clothingRecommendations}>
+            {clothingRecommendation ? (
+              <>
+                <div className={styles.clothingIcon}>{clothingRecommendation.icon}</div>
+                <p>{clothingRecommendation.text}</p>
+              </>
+            ) : (
+              <p>Enter a location to see recommendations.</p>
+            )}
+          </div>
+        </section>
+        <section className={styles.section}>
+          <h2>Your Settings Summary</h2>
+          <div className={styles.settingsSummary}>
+            <p>Your Cold Threshold: {coldThreshold}°C</p>
+            <p>Your Warm Threshold: {warmThreshold}°C</p>
+            {weatherData && weatherData.main.temp < coldThreshold && (
+              <p>Current temperature is below your cold threshold.</p>
+            )}
+            {weatherData && weatherData.main.temp > warmThreshold && (
+              <p>Current temperature is above your warm threshold.</p>
+            )}
+          </div>
+        </section>
+        <Modal
+          isOpen={isSettingsOpen}
+          onRequestClose={() => setIsSettingsOpen(false)}
+          contentLabel="Settings Modal"
+          className={styles.modal}
+          overlayClassName={styles.overlay}
+        >
+          <Settings closeModal={() => setIsSettingsOpen(false)} />
+        </Modal>
+      </div>
     </div>
   );
 };

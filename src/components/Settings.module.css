@@ -1,6 +1,6 @@
 .settingsContainer {
   font-family: 'Press Start 2P', cursive;
-  padding: 30px;
+  padding: 20px;
   background: 
     linear-gradient(45deg, #000 25%, transparent 25%),
     linear-gradient(-45deg, #000 25%, transparent 25%),
@@ -9,29 +9,29 @@
   background-size: 20px 20px;
   background-color: #4b0082;
   color: #fff;
-  border: 4px solid #fff;
-  box-shadow: 5px 5px #000;
+  border: 2px solid #fff;
+  box-shadow: 3px 3px #000;
 }
 
 .settingsHeader h1 {
-  font-size: 24px;
-  text-shadow: 2px 2px #000;
+  font-size: 20px;
+  text-shadow: 1px 1px #000;
 }
 
 .thresholdsSection h2 {
-  font-size: 18px;
-  margin-bottom: 20px;
-  text-shadow: 2px 2px #000;
+  font-size: 16px;
+  margin-bottom: 15px;
+  text-shadow: 1px 1px #000;
 }
 
 .thresholdControl {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .thresholdControl label {
   display: block;
-  margin-bottom: 10px;
-  font-size: 14px;
+  margin-bottom: 8px;
+  font-size: 12px;
 }
 
 .thresholdControl input[type="range"] {
@@ -43,30 +43,10 @@
   transition: opacity .2s;
 }
 
-.thresholdControl input[type="range"]:hover {
-  opacity: 1;
-}
-
-.thresholdControl input[type="range"]::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 25px;
-  height: 25px;
-  background: #ff4500;
-  cursor: pointer;
-}
-
-.thresholdControl input[type="range"]::-moz-range-thumb {
-  width: 25px;
-  height: 25px;
-  background: #ff4500;
-  cursor: pointer;
-}
-
 .thresholdControl span {
   display: inline-block;
-  margin-left: 10px;
-  font-size: 14px;
+  margin-left: 8px;
+  font-size: 12px;
   font-weight: bold;
 }
 
@@ -74,16 +54,39 @@
   background-color: #ff4500;
   color: #fff;
   border: none;
-  padding: 12px 24px;
+  padding: 10px 20px;
   cursor: pointer;
   font-family: 'Press Start 2P', cursive;
-  font-size: 14px;
+  font-size: 12px;
   display: block;
   margin: 0 auto;
   text-shadow: 1px 1px #000;
-  box-shadow: 3px 3px #000;
+  box-shadow: 2px 2px #000;
 }
 
-.saveButton:hover {
-  background-color: #ff6347;
+@media (max-width: 768px) {
+  .settingsContainer {
+    padding: 15px;
+  }
+
+  .settingsHeader h1 {
+    font-size: 18px;
+  }
+
+  .thresholdsSection h2 {
+    font-size: 14px;
+  }
+
+  .thresholdControl label {
+    font-size: 10px;
+  }
+
+  .thresholdControl span {
+    font-size: 10px;
+  }
+
+  .saveButton {
+    font-size: 10px;
+    padding: 8px 16px;
+  }
 }
