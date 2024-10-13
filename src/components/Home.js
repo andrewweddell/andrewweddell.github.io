@@ -17,7 +17,7 @@ const Home = () => {
   const { coldThreshold, warmThreshold } = useContext(ThresholdContext);
   const [displayedLocation, setDisplayedLocation] = useState('');
 
-  const API_KEY = 'a5705087624892d6a318bbd822abe8ec';
+  const API_KEY = window.REACT_APP_WEATHER_API_KEY || process.env.REACT_APP_WEATHER_API_KEY;
 
   // Function to fetch weather data
   const fetchWeatherData = useCallback((lat, lon) => {
