@@ -1,106 +1,89 @@
 .settingsContainer {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Press Start 2P', cursive;
   padding: 30px;
-  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-  color: white;
-  border-radius: 15px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  background: 
+    linear-gradient(45deg, #000 25%, transparent 25%),
+    linear-gradient(-45deg, #000 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #000 75%),
+    linear-gradient(-45deg, transparent 75%, #000 75%);
+  background-size: 20px 20px;
+  background-color: #4b0082;
+  color: #fff;
+  border: 4px solid #fff;
+  box-shadow: 5px 5px #000;
 }
 
-.settingsHeader {
-  text-align: center;
-  margin-bottom: 30px;
-
-  h1 {
-    font-size: 2rem;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-  }
+.settingsHeader h1 {
+  font-size: 24px;
+  text-shadow: 2px 2px #000;
 }
 
-.thresholdsSection {
-  margin-bottom: 30px;
-
-  h2 {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-  }
+.thresholdsSection h2 {
+  font-size: 18px;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px #000;
 }
 
 .thresholdControl {
   margin-bottom: 20px;
+}
 
-  label {
-    display: block;
-    margin-bottom: 10px;
-    font-size: 1rem;
-  }
+.thresholdControl label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
 
-  input[type="range"] {
-    width: 100%;
-    -webkit-appearance: none;
-    background: transparent;
-    margin: 10px 0;
+.thresholdControl input[type="range"] {
+  width: 100%;
+  -webkit-appearance: none;
+  background: #000;
+  outline: none;
+  opacity: 0.7;
+  transition: opacity .2s;
+}
 
-    &:focus {
-      outline: none;
-    }
+.thresholdControl input[type="range"]:hover {
+  opacity: 1;
+}
 
-    &::-webkit-slider-runnable-track {
-      width: 100%;
-      height: 8px;
-      cursor: pointer;
-      background: rgba(255, 255, 255, 0.3);
-      border-radius: 4px;
-    }
+.thresholdControl input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: #ff4500;
+  cursor: pointer;
+}
 
-    &::-webkit-slider-thumb {
-      -webkit-appearance: none;
-      height: 24px;
-      width: 24px;
-      border-radius: 50%;
-      background: #23a6d5;
-      cursor: pointer;
-      margin-top: -8px;
-      box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
-    }
-  }
+.thresholdControl input[type="range"]::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #ff4500;
+  cursor: pointer;
+}
 
-  span {
-    display: inline-block;
-    margin-left: 10px;
-    font-size: 1.2rem;
-    font-weight: bold;
-  }
+.thresholdControl span {
+  display: inline-block;
+  margin-left: 10px;
+  font-size: 14px;
+  font-weight: bold;
 }
 
 .saveButton {
-  background-color: #23a6d5;
-  color: white;
+  background-color: #ff4500;
+  color: #fff;
   border: none;
   padding: 12px 24px;
-  border-radius: 25px;
   cursor: pointer;
-  transition: all 0.3s ease;
-  font-size: 1.2rem;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 14px;
   display: block;
   margin: 0 auto;
-
-  &:hover {
-    background-color: #1c8ab1;
-    transform: scale(1.05);
-  }
+  text-shadow: 1px 1px #000;
+  box-shadow: 3px 3px #000;
 }
 
-@media (min-width: 768px) {
-  .settingsHeader h1 {
-    font-size: 2.5rem;
-  }
-
-  .thresholdsSection h2 {
-    font-size: 1.8rem;
-  }
-
-  .thresholdControl label {
-    font-size: 1.2rem;
-  }
+.saveButton:hover {
+  background-color: #ff6347;
 }
