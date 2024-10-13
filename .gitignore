@@ -23,3 +23,7 @@ yarn-debug.log*
 yarn-error.log*
 
 .env
+<<<<<<< HEAD
+=======
+.env.production
+>>>>>>> 0dc54cf (changes)
