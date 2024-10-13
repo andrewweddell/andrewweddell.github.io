@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/andrewweddell/andrewweddell.github.io/static/css/main.fd29d3de.css",
+    "main.js": "/andrewweddell/andrewweddell.github.io/static/js/main.f2a2e4c4.js",
+    "static/js/453.fbbd8aa0.chunk.js": "/andrewweddell/andrewweddell.github.io/static/js/453.fbbd8aa0.chunk.js",
+    "static/media/logo.png": "/andrewweddell/andrewweddell.github.io/static/media/logo.a92cdf00a90c5454ad1f.png",
+    "index.html": "/andrewweddell/andrewweddell.github.io/index.html",
+    "main.fd29d3de.css.map": "/andrewweddell/andrewweddell.github.io/static/css/main.fd29d3de.css.map",
+    "main.f2a2e4c4.js.map": "/andrewweddell/andrewweddell.github.io/static/js/main.f2a2e4c4.js.map",
+    "453.fbbd8aa0.chunk.js.map": "/andrewweddell/andrewweddell.github.io/static/js/453.fbbd8aa0.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fd29d3de.css",
+    "static/js/main.f2a2e4c4.js"
+  ]
+}
